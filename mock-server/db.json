@@ -1,0 +1,46 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "faker.js",
+      "author": "Marak"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "typicode",
+      "genderCode": "1"
+    },
+    {
+      "name": "cccc",
+      "genderCode": "1",
+      "id": 3
+    },
+    {
+      "name": "aaaa",
+      "genderCode": "2",
+      "id": 4
+    },
+    {
+      "name": "sss",
+      "genderCode": "2",
+      "id": 5
+    },
+    {
+      "name": "aaa",
+      "genderCode": "1",
+      "id": 6
+    },
+    {
+      "name": "ffff",
+      "genderCode": "2",
+      "id": 7
+    }
+  ]
+}
