@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import "isomorphic-unfetch";
 
 export default class Index extends React.Component {

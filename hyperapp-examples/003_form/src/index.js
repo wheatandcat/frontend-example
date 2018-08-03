@@ -80,7 +80,6 @@ const actions = {
 
 const view = (state, actions) => (
   <main>
-    {console.log(state)}
     <h1>form</h1>
     名前:{" "}
     <input
