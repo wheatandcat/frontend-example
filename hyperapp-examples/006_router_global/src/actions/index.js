@@ -6,13 +6,19 @@ export default {
       input: { ...state.createUser.input, [e.target.name]: e.target.value }
     }
   }),
-
   resetCreateUserInput: () => () => ({
     createUser: {
       input: {
         name: "",
         genderCode: "1"
-      }
+      },
+      redirectToId: null
+    }
+  }),
+  redirectToCreateUserId: id => state => ({
+    createUser: {
+      ...state.createUser,
+      redirectToId: id
     }
   }),
 
@@ -68,7 +74,9 @@ export default {
       return alert("登録に失敗しました");
     }
 
-    actions.resetCreateUserInput();
+    const result = await response.json();
+
+    actions.redirectToCreateUserId(result.id);
   },
   removeUser: id => async (_, actions) => {
     const response = await fetch(`http://localhost:3000/users/${id}`, {

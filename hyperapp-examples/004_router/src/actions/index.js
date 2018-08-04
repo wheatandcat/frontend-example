@@ -6,12 +6,19 @@ export default {
         [e.target.name]: e.target.value
       }
     }),
+
     resetInput: () => () => ({
       input: {
         name: "",
         genderCode: "1"
-      }
+      },
+      redirectToId: null
     }),
+
+    redirectToId: id => () => ({
+      redirectToId: id
+    }),
+
     save: () => async (state, actions) => {
       const response = await fetch("http://localhost:3000/users", {
         method: "POST",
@@ -25,7 +32,9 @@ export default {
         return alert("登録に失敗しました");
       }
 
-      actions.resetInput();
+      const result = await response.json();
+
+      actions.redirectToId(result.id);
     }
   },
 

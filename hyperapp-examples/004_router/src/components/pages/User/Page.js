@@ -1,7 +1,11 @@
 import { h } from "hyperapp";
 
 export default ({ match }) => (state, actions) => (
-  <main oncreate={() => actions.user.get(match.params.userId)}>
+  <main
+    oncreate={() => {
+      actions.user.get(match.params.userId);
+    }}
+  >
     <h1>user</h1>
     {state.user.data ? (
       <table border="1" style={{ width: "30rem" }}>
