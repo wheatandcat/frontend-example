@@ -5,7 +5,7 @@
   "author": "“wheatandcat” <wheatandcat@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "HOST=0.0.0.0 PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
@@ -23,4 +24,3 @@
     "eslint-plugin-vue": "^4.0.0"
   }
 }
-
