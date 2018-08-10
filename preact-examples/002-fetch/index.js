@@ -1,21 +1,27 @@
-import React from "react";
-import "isomorphic-unfetch";
+import "./style";
+import { Component } from "preact";
 
-export default class Index extends React.Component {
-  static async getInitialProps() {
+export default class App extends Component {
+  state = {
+    users: []
+  };
+
+  async componentDidMount() {
     const response = await fetch("http://localhost:3000/users");
     const result = await response.json();
 
-    return { users: result };
+    this.setState({
+      users: result
+    });
   }
 
   render() {
     return (
-      <div>
+      <div style={{ padding: "1rem" }}>
         <h1>users</h1>
         <ul>
           <ul>
-            {this.props.users.map((user, index) => (
+            {this.state.users.map((user, index) => (
               <li key={index}>{user.name}</li>
             ))}
           </ul>
