@@ -1,4 +1,4 @@
-# example2
+# example
 
 ## mock-server
 
@@ -12,11 +12,11 @@ npm run mock
 
 ```
 npm install create-elm-app -g
-npm i
+elm-app install
 ```
 
 ## start
 
 ```
-elm-app start
+PORT=3001 elm-app start
 ```

@@ -1,0 +1,29 @@
+body {
+  font-family: "Source Sans Pro", "Trebuchet MS", "Lucida Grande",
+    "Bitstream Vera Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  color: #293c4b;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+table {
+  border: 1px solid #000000;
+  width: 30rem;
+}
+
+table th {
+  border: 1px solid #000000;
+}
+
+table td {
+  border: 1px solid #000000;
+}
