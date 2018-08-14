@@ -45,8 +45,9 @@ type Msg
   = NewUsers (Result Http.Error (List User))
   | ChangeName String
   | ChangeGenderCode String
-  | CreateUser (Result Http.Error (User))
-  | NewUser String String
+  | GetUsers (Result Http.Error String)
+  | CreateUser String String
+  | DeleteUser Int
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
@@ -63,13 +64,16 @@ update msg model =
     ChangeGenderCode newGenderCode ->
       ({model| genderCode = newGenderCode}, Cmd.none)
     
-    NewUser name genderCode ->
+    CreateUser name genderCode ->
       (model, postUser (User 0 name genderCode))
 
-    CreateUser (Ok _) ->
+    DeleteUser id ->
+      (model, deleteUser id)
+
+    GetUsers (Ok _) ->
       (Model [] "" "", getUsers)
 
-    CreateUser (Err _) ->
+    GetUsers (Err _) ->
       (model, Cmd.none)
 
 -- VIEW
@@ -80,7 +84,7 @@ view model =
     [ 
       h2 [] [text "form"]
     , span [] [text "名前: "]
-    , input [onInput ChangeName] []
+    , input [onInput ChangeName, value model.name] []
     , div []
         [ label []
             [ 
@@ -93,7 +97,7 @@ view model =
             ]
         ]
     , br [] []
-    , button [onClick (NewUser model.name model.genderCode)] [text "登録" ]
+    , button [onClick (CreateUser model.name model.genderCode)] [text "登録" ]
     , br [] []
     , br [] []
     , h2 [] [text "users"]
@@ -102,6 +106,7 @@ view model =
             [ th [] [text "id"]
             , th [] [text "名前"]
             , th [] [text "性別"]
+            , th [] [text "アクション"]
             ]
         ]
         ++ (List.map rowUser model.users)
@@ -114,6 +119,9 @@ rowUser u =
     [ td [] [ text (toString u.id) ]
     , td [] [ text u.name ]
     , td [] [ text (viewGender u.genderCode) ]
+    , td [] [ 
+      button [onClick (DeleteUser u.id)] [text "削除" ]
+     ]
     ]
 
 viewGender: String -> String
@@ -148,13 +156,22 @@ decodeUsers : Decode.Decoder (List User)
 decodeUsers =
   Decode.list decodeUser
 
+postUserRequest : User -> Http.Request String
+postUserRequest user =
+      Http.request 
+        { method = "POST"
+        , headers = []
+        , url = "http://localhost:3000/users"
+        , body = Http.jsonBody (encodedUser user)
+        , expect = Http.expectString
+        , timeout = Nothing
+        , withCredentials = False
+        }
+
 postUser : User -> Cmd Msg
 postUser user =
-  let
-    url =
-      "http://localhost:3000/users"
-  in
-    Http.send CreateUser (Http.post url (Http.jsonBody (encodedUser user)) decodeUser)
+    postUserRequest user
+        |> Http.send GetUsers 
 
 encodedUser : User -> Encode.Value
 encodedUser user = 
@@ -167,3 +184,20 @@ encodedUser user =
     in
         value
             |> Encode.object
+
+deleteUserRequest : Int -> Http.Request String
+deleteUserRequest id =
+      Http.request 
+        { method = "DELETE"
+        , headers = []
+        , url = String.concat ["http://localhost:3000/users/", toString id]
+        , body = Http.emptyBody
+        , expect = Http.expectString
+        , timeout = Nothing
+        , withCredentials = False
+        }
+
+deleteUser : Int -> Cmd Msg
+deleteUser id =
+    deleteUserRequest id
+        |> Http.send GetUsers 
