@@ -39,10 +39,10 @@ viewPage route model =
         usersPage model
 
     Router.UserRoute id ->
-        userPage id
+        userPage model.user
     
     Router.CreateUserRoute ->
-        createUserPage
+        createUserPage model.input.name model.input.genderCode
 
 usersPage : Model.Model -> Html Msg
 usersPage model =
@@ -76,15 +76,43 @@ rowUser u =
 viewGender: String -> String
 viewGender genderCode = if genderCode == "1" then "男性" else "女性"
 
-userPage : Int -> Html Msg
-userPage id =
+userPage : Model.User -> Html Msg
+userPage u =
     div [] [
          h1 [] [ text "user" ]
-        ,h2 [] [ text (toString id)]
+        , table [] 
+            ([thead []
+                [ th [] [text "id"]
+                , th [] [text "名前"]
+                , th [] [text "性別"]
+                ]
+            , tr [] 
+                [ td [] [text (toString u.id)]
+                , td [] [text u.name ]
+                , td [] [text (viewGender u.genderCode) ]
+                ]
+            ])
+        ]
+    
+
+createUserPage : String -> String -> Html Msg
+createUserPage name genderCode =
+    div [] [
+         h1 [] [ text "create user" ]
+        ,span [] [text "名前: "]
+        ,input [onInput ChangeName, value name] []
+        ,div []
+            [ label []
+                [ 
+                input [type_ "radio", onClick (ChangeGenderCode "1"), checked (if genderCode == "1" then True else False)] []
+                , text " 男性 "
+                ]
+            , label []
+                [ input [type_ "radio", onClick (ChangeGenderCode "2"), checked (if genderCode == "2" then True else False)] []
+                , text " 女性 "
+                ]
+            ]
+        , br [] []
+        , button [onClick (CreateUser name genderCode)] [text "登録" ]
     ]
-
-createUserPage : Html Msg
-createUserPage =
-    h1 [] [ text "create user" ]
-
 
