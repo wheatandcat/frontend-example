@@ -10,10 +10,15 @@ const actions = {
 };
 
 const view = (state, actions) => (
-  <main>
-    <h1>{state.count}</h1>
-    <button onclick={actions.down}>-</button>
-    <button onclick={actions.up}>+</button>
+  <main style={{ padding: "1rem" }}>
+    <h3>hyper-app | 001-simple</h3>
+    <br />
+    <div>
+      <span style={{ paddingLeft: "1rem" }}>{state.count}</span>
+      <br />
+      <button onclick={actions.down}>-</button>
+      <button onclick={actions.up}>+</button>
+    </div>
   </main>
 );
 
