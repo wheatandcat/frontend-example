@@ -1,12 +1,14 @@
 import { h, app } from "hyperapp";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 const state = {
   users: []
 };
 
 const actions = {
   getUsers: () => async () => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
 
     if (!response.ok) {
       return alert("通信エラー");
@@ -20,12 +22,15 @@ const actions = {
 };
 
 const view = (state, actions) => (
-  <main>
-    <h1>users</h1>
+  <main oncreate={actions.getUsers} style={{ padding: "1rem" }}>
+    <h3>hyper-app | 002-fetch</h3>
+    <br />
+    <h3>users</h3>
     <ul>
-      {state.users.map((user, index) => <li key={index}>{user.name}</li>)}
+      {state.users.map((user, index) => (
+        <li key={index}>{user.name}</li>
+      ))}
     </ul>
-    <button onclick={actions.getUsers}>更新</button>
   </main>
 );
 

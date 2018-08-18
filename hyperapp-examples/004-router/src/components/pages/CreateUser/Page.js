@@ -9,7 +9,6 @@ export default () => (state, actions) => {
 
   return (
     <main oncreate={actions.createUser.resetInput}>
-      <h1>form</h1>
       名前:{" "}
       <input
         type="text"
@@ -26,14 +25,16 @@ export default () => (state, actions) => {
         value={1}
         checked={state.createUser.input.genderCode == 1}
         oninput={actions.createUser.onInput}
-      />男性{" "}
+      />
+      男性{" "}
       <input
         type="radio"
         name="genderCode"
         value={2}
         checked={state.createUser.input.genderCode == 2}
         oninput={actions.createUser.onInput}
-      />女性
+      />
+      女性
       <br />
       <br />
       <div>

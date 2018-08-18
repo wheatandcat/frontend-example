@@ -27,3 +27,12 @@ npm run mock
 npm run build
 npm run build-server
 ```
+
+## DEMO
+https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/005-router_bundle/index.html
+
+### Demo Deploy
+
+```
+sh deploy.sh
+```

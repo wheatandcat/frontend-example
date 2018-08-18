@@ -1,0 +1,10 @@
+{
+  "name": "now-project",
+  "version": "0.1.0",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "start": "http-server -p 3000"
+  }
+}

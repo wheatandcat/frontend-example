@@ -1,5 +1,7 @@
 import { h, app } from "hyperapp";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 const state = {
   input: {
     name: "",
@@ -29,7 +31,7 @@ const actions = {
   }),
 
   save: () => async state => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch(`${host}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -48,7 +50,7 @@ const actions = {
   },
 
   remove: id => async () => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -64,7 +66,7 @@ const actions = {
   },
 
   getUsers: () => async () => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
 
     if (!response.ok) {
       return alert("通信エラー");
@@ -80,7 +82,9 @@ const actions = {
 
 const view = (state, actions) => (
   <main>
-    <h1>form</h1>
+    <h3>hyper-app | 003-form</h3>
+    <br />
+    <h3>form</h3>
     名前:{" "}
     <input
       type="text"
@@ -96,21 +100,23 @@ const view = (state, actions) => (
       value={1}
       checked={state.input.genderCode == 1}
       oninput={actions.onInput}
-    />男性{" "}
+    />
+    男性{" "}
     <input
       type="radio"
       name="genderCode"
       value={2}
       checked={state.input.genderCode == 2}
       oninput={actions.onInput}
-    />女性
+    />
+    女性
     <br />
     <br />
     <div>
       <button onclick={actions.save}>登録</button>
     </div>
     <br />
-    <h1>users</h1>
+    <h3>users</h3>
     <table border="1" style={{ width: "30rem" }}>
       <tr>
         <th>id</th>

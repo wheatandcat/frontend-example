@@ -27,3 +27,12 @@ npm run mock
 npm run build
 npm run build-server
 ```
+
+## DEMO
+https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/003-form/index.html
+
+### Demo Deploy
+
+```
+sh deploy.sh
+```

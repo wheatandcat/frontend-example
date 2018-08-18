@@ -3,7 +3,6 @@ import { Link } from "@hyperapp/router";
 
 export default () => (state, actions) => (
   <main oncreate={actions.getUsers}>
-    <h1>users</h1>
     <table border="1" style={{ width: "30rem" }}>
       <tr>
         <th>id</th>

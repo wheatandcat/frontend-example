@@ -1,3 +1,5 @@
+const host = process.env.HOST || "http://localhost:3000";
+
 export default {
   createUser: {
     onInput: e => state => ({
@@ -20,7 +22,7 @@ export default {
     }),
 
     save: () => async (state, actions) => {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch(`${host}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -40,7 +42,7 @@ export default {
 
   users: {
     remove: id => async (_, actions) => {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`${host}/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -56,7 +58,7 @@ export default {
     },
 
     get: () => async (_, actions) => {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch(`${host}/users`);
 
       if (!response.ok) {
         return alert("通信エラー");
@@ -74,7 +76,7 @@ export default {
 
   user: {
     get: id => async (_, actions) => {
-      const response = await fetch(`http://localhost:3000/users/${id}`);
+      const response = await fetch(`${host}/users/${id}`);
 
       if (!response.ok) {
         return alert("通信エラー");

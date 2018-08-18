@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel ./src/index.html --open",
     "build": "parcel build --no-minify ./src/index.html",
-    "build-server": "http-server -o -d dist"
+    "build-server": "http-server -d dist"
   },
   "repository": {
     "type": "git",

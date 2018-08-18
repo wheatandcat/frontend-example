@@ -1,13 +1,15 @@
 import { h } from "hyperapp";
 import { Link } from "@hyperapp/router";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 export const state = {
   nodes: []
 };
 
 export const actions = {
   remove: id => async (_, actions) => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -23,7 +25,7 @@ export const actions = {
   },
 
   get: () => async (_, actions) => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
 
     if (!response.ok) {
       return alert("通信エラー");
@@ -41,7 +43,6 @@ export const actions = {
 
 export default () => (state, actions) => (
   <main oncreate={actions.users.get}>
-    <h1>users</h1>
     <table border="1" style={{ width: "30rem" }}>
       <tr>
         <th>id</th>
