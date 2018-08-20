@@ -3,10 +3,17 @@
 
 import Html exposing (..)
 import Http
+import String
 import Json.Decode as Decode
 
+-- Data type for the flags
+type alias Flags =
+  { host : String
+  }
+  
+
 main =
-  Html.program
+  Html.programWithFlags
     { init = init
     , view = view
     , update = update
@@ -22,14 +29,15 @@ type alias User = {
 
 type alias Model =
   { 
+    host: String,
     users: List User
   }
 
 
-init : (Model, Cmd Msg)
-init =
-  ( Model []
-  , getUsers
+init: Flags ->  (Model, Cmd Msg)
+init flags =
+  ( Model flags.host []
+  , getUsers flags.host
   )
 
 
@@ -44,8 +52,8 @@ type Msg
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    NewUsers (Ok users) ->
-      (Model users, Cmd.none)
+    NewUsers (Ok newUsers) ->
+      ({model | users = newUsers}, Cmd.none)
 
     NewUsers (Err _) ->
       (model, Cmd.none)
@@ -56,7 +64,9 @@ update msg model =
 view : Model -> Html Msg
 view model =
   div []
-    [ h2 [] [text "users"]
+    [ 
+      h3 [] [ text "elm | 002-fetch"]
+    , h2 [] [text "users"]
     , ul [] (List.map viewUser model.users)
     ]
 
@@ -77,11 +87,11 @@ subscriptions model =
 
 -- HTTP
 
-getUsers : Cmd Msg
-getUsers =
+getUsers :String -> Cmd Msg
+getUsers host =
   let
     url =
-      "http://localhost:3000/users"
+      String.concat[host,"/users"]
   in
     Http.send NewUsers (Http.get url decodeUsers)
 

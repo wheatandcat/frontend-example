@@ -1,6 +1,8 @@
 import { Component } from "preact";
 import { Link } from "preact-router/match";
 
+const host = process.env.PREACT_APP_HOST || "http://localhost:3000";
+
 export default class extends Component {
   state = {
     users: []
@@ -11,7 +13,7 @@ export default class extends Component {
   }
 
   getUsers = async () => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
     const result = await response.json();
 
     if (!response.ok) {
@@ -24,7 +26,7 @@ export default class extends Component {
   };
 
   onRemove = async id => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"

@@ -2,9 +2,9 @@ import { h, app } from "hyperapp";
 import { Link, Route, location, Switch, Redirect } from "@hyperapp/router";
 import actionsBase from "./actions";
 import stateBase from "./state";
-import Users from "./components/pages/Users/Page";
-import User from "./components/pages/User/Page";
-import CreateUser from "./components/pages/CreateUser/Page";
+import Users from "./components/pages/Users";
+import User from "./components/pages/User";
+import CreateUser from "./components/pages/CreateUser";
 
 const state = {
   ...stateBase,
@@ -18,7 +18,7 @@ const actions = {
 
 const view = () => (
   <div>
-    <h3>hyper-app | 004-router</h3>
+    <h3>hyper-app | 006-router_global</h3>
     <ul>
       <li>
         <Link to="/users">Users</Link>

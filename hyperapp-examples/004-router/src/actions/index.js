@@ -1,94 +1,98 @@
 const host = process.env.HOST || "http://localhost:3000";
 
 export default {
-  createUser: {
-    onInput: e => state => ({
-      input: {
-        ...state.input,
-        [e.target.name]: e.target.value
-      }
-    }),
-
-    resetInput: () => () => ({
+  // 入力は全てこれを使う
+  // keyNameは、「data-input-name="*****""」で指定
+  onInput: e => state => ({
+    [e.target.getAttribute("data-input-name")]: {
+      input: { ...state.createUser.input, [e.target.name]: e.target.value }
+    }
+  }),
+  resetCreateUserInput: () => () => ({
+    createUser: {
       input: {
         name: "",
         genderCode: "1"
       },
       redirectToId: null
-    }),
-
-    redirectToId: id => () => ({
+    }
+  }),
+  redirectToCreateUserId: id => state => ({
+    createUser: {
+      ...state.createUser,
       redirectToId: id
-    }),
-
-    save: () => async (state, actions) => {
-      const response = await fetch(`${host}/users`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(state.input)
-      });
-
-      if (!response.ok) {
-        return alert("登録に失敗しました");
-      }
-
-      const result = await response.json();
-
-      actions.redirectToId(result.id);
     }
+  }),
+
+  /* Users */
+  getUsers: () => async (_, actions) => {
+    const response = await fetch(`${host}/users`);
+
+    if (!response.ok) {
+      return alert("通信エラー");
+    }
+
+    const result = await response.json();
+
+    actions.setUsers(result);
+  },
+  setUsers: users => () => {
+    return {
+      users: {
+        nodes: users
+      }
+    };
   },
 
-  users: {
-    remove: id => async (_, actions) => {
-      const response = await fetch(`${host}/users/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
+  /* User */
+  getUser: id => async (_, actions) => {
+    const response = await fetch(`${host}/users/${id}`);
 
-      if (!response.ok) {
-        return alert("削除に失敗しました");
-      }
-
-      // リストを再取得
-      actions.get();
-    },
-
-    get: () => async (_, actions) => {
-      const response = await fetch(`${host}/users`);
-
-      if (!response.ok) {
-        return alert("通信エラー");
-      }
-
-      const result = await response.json();
-
-      actions.set(result);
-    },
-
-    set: users => () => {
-      return { nodes: users };
+    if (!response.ok) {
+      return alert("通信エラー");
     }
+
+    const result = await response.json();
+
+    actions.setUser(result);
   },
-
-  user: {
-    get: id => async (_, actions) => {
-      const response = await fetch(`${host}/users/${id}`);
-
-      if (!response.ok) {
-        return alert("通信エラー");
+  setUser: user => () => {
+    return {
+      user: {
+        data: user
       }
+    };
+  },
+  saveUser: () => async (state, actions) => {
+    const response = await fetch(`${host}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(state.createUser.input)
+    });
 
-      const result = await response.json();
-
-      actions.set(result);
-    },
-
-    set: user => () => {
-      return { data: user };
+    if (!response.ok) {
+      return alert("登録に失敗しました");
     }
+
+    const result = await response.json();
+
+    actions.redirectToCreateUserId(result.id);
+  },
+  removeUser: id => async (_, actions) => {
+    const response = await fetch(`${host}/users/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      return alert("削除に失敗しました");
+    }
+
+    // リストを再取得
+    actions.getUsers();
   }
 };

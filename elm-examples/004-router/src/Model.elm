@@ -1,6 +1,11 @@
-module Model exposing (Model,User,Input)
+module Model exposing (Model,User,Input,Flags)
 
 import Navigation
+
+-- Data type for the flags
+type alias Flags =
+  { host : String
+  }
 
 type alias User = {
   id: Int,
@@ -14,7 +19,9 @@ type alias Input = {
 }
 
 type alias Model =
-    { currentRoute : Navigation.Location
+    { 
+      host: String
+    , currentRoute : Navigation.Location
     , users: List User
     , user: User
     , input: Input

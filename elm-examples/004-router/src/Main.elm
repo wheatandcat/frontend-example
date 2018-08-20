@@ -5,16 +5,15 @@ import View
 import Model
 import Navigation
 import Router
-import Dict exposing (Dict)
 import Msg exposing (Msg(..))
 import Json.Decode as Decode
 import Json.Encode as Encode
 import String
 import UrlParser as Url exposing ((</>), (<?>), s, int, stringParam, top)
 
-main : Program Never Model.Model Msg
+main : Program Model.Flags Model.Model Msg
 main =
-    Navigation.program UrlChange
+    Navigation.programWithFlags UrlChange
         { view = View.view
         , init = init
         , update = update
@@ -23,34 +22,34 @@ main =
 
 ----init
 
-init : Navigation.Location -> (Model.Model, Cmd Msg)
-init location =
-    ( Model.Model location [] (Model.User 0 "" "") (Model.Input "" "1")
-    , routerInit location
+init : Model.Flags -> Navigation.Location -> (Model.Model, Cmd Msg)
+init flags location =
+    ( Model.Model flags.host location [] (Model.User 0 "" "") (Model.Input "" "1")
+    , routerInit flags.host location
     )
 
-routerInit: Navigation.Location -> Cmd Msg
-routerInit location =
+routerInit: String -> Navigation.Location -> Cmd Msg
+routerInit host location =
     let
         page = Url.parsePath Router.route location
     in
         case page of
             Nothing ->
-                getUsers
+                getUsers host
 
             Just route ->
-                msgInit route
+                msgInit host route
 
-msgInit route =
+msgInit host route =
   case route of
     Router.UsersRoute -> 
-        getUsers
+        getUsers host
 
     Router.UserRoute id ->
-        getUser id
+        getUser host id
     
     Router.CreateUserRoute ->
-        getUsers
+        getUsers host
 
 ----update
 
@@ -73,13 +72,13 @@ update msg model =
           (model, Cmd.none)
 
         GetUsers (Ok _) ->
-          (model, getUsers)
+          (model, getUsers model.host)
 
         GetUsers (Err _) ->
           (model, Cmd.none)
 
         DeleteUser id ->
-          (model, deleteUser id)
+          (model, deleteUser model.host id)
 
         ChangeName newName ->
           ({model| input = (Model.Input newName model.input.genderCode)}, Cmd.none)
@@ -88,10 +87,10 @@ update msg model =
           ({model| input = (Model.Input model.input.name newGenderCode)}, Cmd.none)
 
         CreateUser name genderCode ->
-         (model, postUser (Model.User 0 name genderCode))
+         (model, postUser model.host (Model.User 0 name genderCode))
 
         RedirectToUser (Ok user) ->
-          (model, Navigation.load (String.concat["/users/", (toString user.id)]))
+          (model, Navigation.load ("/users/"++(toString user.id)))
 
         RedirectToUser (Err _) ->
           (model, Cmd.none)
@@ -101,19 +100,19 @@ update msg model =
 
 -- HTTP
 
-getUsers : Cmd Msg
-getUsers =
+getUsers : String -> Cmd Msg
+getUsers host =
   let
     url =
-      "http://localhost:3000/users"
+      host++"/users"
   in
     Http.send NewUsers (Http.get url decodeUsers)
 
-getUser : Int -> Cmd Msg
-getUser id =
+getUser : String -> Int -> Cmd Msg
+getUser host id =
   let
     url =
-      String.concat["http://localhost:3000/users/", (toString id)]
+      host++"/users/"++(toString id)
   in
     Http.send NewUser (Http.get url decodeUser)
 
@@ -129,21 +128,21 @@ decodeUsers : Decode.Decoder (List Model.User)
 decodeUsers =
   Decode.list decodeUser
 
-postUserRequest : Model.User -> Http.Request Model.User
-postUserRequest user =
+postUserRequest : String -> Model.User -> Http.Request Model.User
+postUserRequest host user =
       Http.request 
         { method = "POST"
         , headers = []
-        , url = "http://localhost:3000/users"
+        , url = host++"/users"
         , body = Http.jsonBody (encodedUser user)
         , expect = Http.expectJson decodeUser
         , timeout = Nothing
         , withCredentials = False
         }
 
-postUser : Model.User -> Cmd Msg
-postUser user =
-    postUserRequest user
+postUser : String -> Model.User -> Cmd Msg
+postUser host user =
+    postUserRequest host user
         |> Http.send RedirectToUser 
 
 encodedUser : Model.User -> Encode.Value
@@ -158,19 +157,19 @@ encodedUser user =
         value
             |> Encode.object
 
-deleteUserRequest : Int -> Http.Request String
-deleteUserRequest id =
+deleteUserRequest : String -> Int -> Http.Request String
+deleteUserRequest host id =
       Http.request 
         { method = "DELETE"
         , headers = []
-        , url = String.concat ["http://localhost:3000/users/", toString id]
+        , url = host++"/users/"++toString id
         , body = Http.emptyBody
         , expect = Http.expectString
         , timeout = Nothing
         , withCredentials = False
         }
 
-deleteUser : Int -> Cmd Msg
-deleteUser id =
-    deleteUserRequest id
+deleteUser : String -> Int -> Cmd Msg
+deleteUser host id =
+    deleteUserRequest host id
         |> Http.send GetUsers 

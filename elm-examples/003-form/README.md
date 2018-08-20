@@ -20,3 +20,6 @@ elm-app install
 ```
 PORT=3001 elm-app start
 ```
+
+## Demo
+https://wheatandcat.github.io/examples-pages/frontend-example/elm-examples/003-form/index.html?v=1

@@ -1,6 +1,8 @@
 import "./style";
 import { Component } from "preact";
 
+const host = process.env.PREACT_APP_HOST || "http://localhost:3000";
+
 export default class App extends Component {
   state = {
     input: {
@@ -15,7 +17,7 @@ export default class App extends Component {
   }
 
   getUsers = async () => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
     const result = await response.json();
 
     this.setState({
@@ -45,7 +47,7 @@ export default class App extends Component {
   };
 
   onSave = async () => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch(`${host}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -64,7 +66,7 @@ export default class App extends Component {
   };
 
   onRemove = async id => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -82,7 +84,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>form</h1>
+        <h3>preact | 003-form</h3>
+        <br />
+        <h3>form</h3>
         名前:{" "}
         <input
           type="text"
@@ -114,7 +118,7 @@ export default class App extends Component {
         <div>
           <button onClick={this.onSave}>登録</button>
         </div>
-        <h1>users</h1>
+        <h3>users</h3>
         <table border="1" style={{ width: "30rem" }}>
           <thead>
             <tr>

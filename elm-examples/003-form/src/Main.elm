@@ -9,12 +9,17 @@ import Json.Decode as Decode
 import Json.Encode as Encode
 
 main =
-  Html.program
+  Html.programWithFlags
     { init = init
     , view = view
     , update = update
     , subscriptions = subscriptions
     }
+
+-- Data type for the flags
+type alias Flags =
+  { host : String
+  }
 
 -- MODEL
 
@@ -27,16 +32,17 @@ type alias User = {
 
 type alias Model =
   { 
+    host: String,
     users: List User,
     name: String,
     genderCode: String
   }
 
 
-init : (Model, Cmd Msg)
-init =
-  ( Model [] "" "1"
-  , getUsers
+init :Flags -> (Model, Cmd Msg)
+init flags =
+  ( Model flags.host [] "" "1"
+  , getUsers flags.host
   )
 
 -- UPDATE
@@ -52,8 +58,8 @@ type Msg
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    NewUsers (Ok users) ->
-      (Model users "" "1", Cmd.none)
+    NewUsers (Ok newUsers) ->
+      ({model| users = newUsers}, Cmd.none)
 
     NewUsers (Err _) ->
       (model, Cmd.none)
@@ -65,13 +71,13 @@ update msg model =
       ({model| genderCode = newGenderCode}, Cmd.none)
     
     CreateUser name genderCode ->
-      (model, postUser (User 0 name genderCode))
+      (model, postUser model.host (User 0 name genderCode))
 
     DeleteUser id ->
-      (model, deleteUser id)
+      (model, deleteUser model.host id)
 
     GetUsers (Ok _) ->
-      (Model [] "" "", getUsers)
+      (model, getUsers model.host)
 
     GetUsers (Err _) ->
       (model, Cmd.none)
@@ -82,7 +88,8 @@ view : Model -> Html Msg
 view model =
   div [] 
     [ 
-      h2 [] [text "form"]
+      h3 [] [ text "elm | 003-form"]
+    , h2 [] [text "form"]
     , span [] [text "名前: "]
     , input [onInput ChangeName, value model.name] []
     , div []
@@ -136,11 +143,11 @@ subscriptions model =
 
 -- HTTP
 
-getUsers : Cmd Msg
-getUsers =
+getUsers : String -> Cmd Msg
+getUsers host =
   let
     url =
-      "http://localhost:3000/users"
+      host ++ "/users"
   in
     Http.send NewUsers (Http.get url decodeUsers)
 
@@ -156,22 +163,22 @@ decodeUsers : Decode.Decoder (List User)
 decodeUsers =
   Decode.list decodeUser
 
-postUserRequest : User -> Http.Request String
-postUserRequest user =
+postUserRequest : String -> User -> Http.Request String
+postUserRequest host user =
       Http.request 
         { method = "POST"
         , headers = []
-        , url = "http://localhost:3000/users"
+        , url = host++"/users"
         , body = Http.jsonBody (encodedUser user)
         , expect = Http.expectString
         , timeout = Nothing
         , withCredentials = False
         }
 
-postUser : User -> Cmd Msg
-postUser user =
-    postUserRequest user
-        |> Http.send GetUsers 
+postUser : String -> User -> Cmd Msg
+postUser host user =
+    postUserRequest host user
+        |> Http.send GetUsers
 
 encodedUser : User -> Encode.Value
 encodedUser user = 
@@ -185,19 +192,19 @@ encodedUser user =
         value
             |> Encode.object
 
-deleteUserRequest : Int -> Http.Request String
-deleteUserRequest id =
+deleteUserRequest : String -> Int -> Http.Request String
+deleteUserRequest host id =
       Http.request 
         { method = "DELETE"
         , headers = []
-        , url = String.concat ["http://localhost:3000/users/", toString id]
+        , url = host++"/users/"++toString id
         , body = Http.emptyBody
         , expect = Http.expectString
         , timeout = Nothing
         , withCredentials = False
         }
 
-deleteUser : Int -> Cmd Msg
-deleteUser id =
-    deleteUserRequest id
+deleteUser : String -> Int -> Cmd Msg
+deleteUser host id =
+    deleteUserRequest host id
         |> Http.send GetUsers 

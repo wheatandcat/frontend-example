@@ -14,9 +14,13 @@ npm run build
 
 # test the production build locally
 npm run serve
+``` 
 
-# run tests with jest and preact-render-spy 
-npm run test
+## DEMO
+https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/001-simple/index.html
+
+### Demo Deploy
+
 ```
-
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+sh deploy.sh
+```

@@ -1,14 +1,14 @@
 import { Component } from "preact";
 
+const host = process.env.PREACT_APP_HOST || "http://localhost:3000";
+
 export default class extends Component {
   state = {
     user: null
   };
 
   async componentDidMount() {
-    const response = await fetch(
-      `http://localhost:3000/users/${this.props.userId}`
-    );
+    const response = await fetch(`${host}/users/${this.props.userId}`);
     if (!response.ok) {
       return alert("削除に失敗しました");
     }

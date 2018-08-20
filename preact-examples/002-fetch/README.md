@@ -1,4 +1,4 @@
-# 004-router
+# 002-fetch
 
 ## CLI Commands
 
@@ -15,12 +15,10 @@ npm run build
 # test the production build locally
 npm run serve
 
-# run tests with jest and preact-render-spy 
-npm run test
 ```
 
 ## DEMO
-https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/004-router/index.html
+https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/002-fetch/index.html
 
 ### Demo Deploy
 

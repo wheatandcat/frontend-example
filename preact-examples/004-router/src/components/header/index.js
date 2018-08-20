@@ -4,7 +4,7 @@ import style from "./style";
 
 const Header = () => (
   <header class={style.header}>
-    <h1>Preact App</h1>
+    <h1>preact | 004-router</h1>
     <nav>
       <Link activeClassName={style.active} href="/">
         Users

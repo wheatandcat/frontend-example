@@ -1,6 +1,8 @@
 import { Component } from "preact";
 import { route } from "preact-router";
 
+const host = process.env.PREACT_APP_HOST || "http://localhost:3000";
+
 export default class extends Component {
   state = {
     input: {
@@ -22,7 +24,7 @@ export default class extends Component {
   };
 
   onSave = async () => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch(`${host}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

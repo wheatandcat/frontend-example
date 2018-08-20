@@ -28,9 +28,8 @@ npm run build
 npm run build-server
 ```
 
-
 ## DEMO
-https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/004-router/index.html?v=6
+https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/004-router/index.html?v=2
 
 ### Demo Deploy
 

@@ -1,5 +1,7 @@
 import "./style";
-import { Component } from "preact";
+import { h, Component } from "preact";
+
+const host = process.env.PREACT_APP_HOST || "http://localhost:3000";
 
 export default class App extends Component {
   state = {
@@ -7,7 +9,7 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(`${host}/users`);
     const result = await response.json();
 
     this.setState({
@@ -18,7 +20,9 @@ export default class App extends Component {
   render() {
     return (
       <div style={{ padding: "1rem" }}>
-        <h1>users</h1>
+        <h3>preact | 002-fetch</h3>
+        <br />
+        <h3>users</h3>
         <ul>
           <ul>
             {this.state.users.map((user, index) => (
