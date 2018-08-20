@@ -20,10 +20,6 @@ npm run test
 ```
 
 ## DEMO
-https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/004-router/index.html
+https://high-lan.glitch.me/
 
-### Demo Deploy
 
-```
-sh deploy.sh
-```
