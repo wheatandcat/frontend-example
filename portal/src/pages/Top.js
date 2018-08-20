@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import List from "@material-ui/core/List";
@@ -38,56 +37,65 @@ class GuttersGrid extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { spacing } = this.state;
 
     return (
-      <Grid container className={classes.root} spacing={16}>
-        {demos.map(demo => (
-          <Grid item xs={12}>
-            <Grid
-              container
-              className={classes.demo}
-              justify="center"
-              spacing={Number(spacing)}
+      <div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignContent: "flex-start",
+            paddingRight: "5rem",
+            paddingLeft: "5rem",
+            width: "80%"
+          }}
+        >
+          {demos.map(demo => (
+            <Paper
+              className={classes.paper}
               key={demo.name}
+              style={{ margin: "2rem", padding: "1rem" }}
             >
-              <Grid item>
-                <Paper className={classes.paper}>
-                  <List
-                    component="nav"
-                    subheader={
-                      <ListSubheader component="div">{demo.name}</ListSubheader>
-                    }
-                  >
-                    {demo.items.map(item => (
-                      <ListItem button>
-                        <a
-                          href={item.demo}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        >
-                          <ListItemText primary={`demo ${item.name}`} />
-                        </a>
-                        <ListItemSecondaryAction>
-                          <a
-                            href={item.source}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                          >
-                            <IconButton aria-label="Code">
-                              <Code />
-                            </IconButton>
-                          </a>
-                        </ListItemSecondaryAction>
-                      </ListItem>
-                    ))}
-                  </List>
-                </Paper>
-              </Grid>
-            </Grid>
-          </Grid>
-        ))}
-      </Grid>
+              <img
+                src={require(`./${demo.name}.png`)}
+                style={{
+                  width: "100px",
+                  height: "100px"
+                }}
+              />
+              <List
+                subheader={
+                  <ListSubheader component="div">{demo.name}</ListSubheader>
+                }
+              >
+                {demo.items.map(item => (
+                  <ListItem button>
+                    <a
+                      href={`${item.demo}?v=abcd`}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <ListItemText primary={`demo ${item.name}`} />
+                    </a>
+                    <ListItemSecondaryAction>
+                      <a
+                        href={item.source}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <IconButton aria-label="Code">
+                          <Code />
+                        </IconButton>
+                      </a>
+                    </ListItemSecondaryAction>
+                  </ListItem>
+                ))}
+              </List>
+            </Paper>
+          ))}
+        </div>
+      </div>
     );
   }
 }

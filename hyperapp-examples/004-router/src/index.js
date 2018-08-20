@@ -18,7 +18,7 @@ const actions = {
 
 const view = () => (
   <div>
-    <h3>hyper-app | 006-router_global</h3>
+    <h3>hyper-app | 004-router</h3>
     <ul>
       <li>
         <Link to="/users">Users</Link>
