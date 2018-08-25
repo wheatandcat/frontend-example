@@ -49,7 +49,7 @@ export default class extends React.Component {
 
     const result = await response.json();
 
-    Router.push(`/userDetail?id=${result.id}`);
+    Router.push(`/userDetail?id=${result.id}`, `/userDetail/${result.id}`);
   };
 
   render() {

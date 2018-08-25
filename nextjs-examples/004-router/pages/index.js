@@ -66,7 +66,10 @@ export default class Index extends React.Component {
             {this.state.users.map((user, index) => (
               <tr key={index}>
                 <td>
-                  <Link href={`/userDetail?id=${user.id}`}>
+                  <Link
+                    href={`/userDetail?id=${user.id}`}
+                    as={`/userDetail/${user.id}`}
+                  >
                     <a>{user.id}</a>
                   </Link>
                 </td>
