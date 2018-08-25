@@ -166,28 +166,25 @@ const demos = [
     items: [
       {
         name: "001-simple",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/001-simple/index.html",
+        demo: "https://nextjs-simple.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nextjs-examples/001-simple"
       },
       {
         name: "002-fetch",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/002-fetch/index.html",
+        demo: "https://nextjs-fetch.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nextjs-examples/002-fetch"
       },
       {
         name: "003-form",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/003-form/index.html",
+        demo: "https://nextjs-form.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nextjs-examples/003-form"
       },
       {
         name: "004-router",
-        demo: "https://high-lan.glitch.me/",
+        demo: "https://nextjs-router.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nextjs-examples/004-router"
       }
