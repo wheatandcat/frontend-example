@@ -67,27 +67,30 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ "./pages/index.js":
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("@babel/runtime/regenerator");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link__ = __webpack_require__("next/link");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_link__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__ = __webpack_require__("isomorphic-unfetch");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_isomorphic_unfetch__);
 
-var _jsxFileName = "/Users/iinoyouhei/work/git/frontend-example/nextjs-examples/002-fetch/pages/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -107,7 +110,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-
+var host = process.env.HOST || "http://localhost:3000";
 
 var Index =
 /*#__PURE__*/
@@ -124,32 +127,12 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
+        style: {
+          padding: "1rem"
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        }
-      }, "users"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        }
-      }, this.props.users.map(function (user, index) {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "nextjs | 001-simple"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "users"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, this.props.users.map(function (user, index) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("li", {
-          key: index,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 22
-          }
+          key: index
         }, user.name);
       }))));
     }
@@ -165,7 +148,7 @@ function (_React$Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch("http://localhost:3000/users");
+                return fetch("".concat(host, "/users"));
 
               case 2:
                 response = _context.sent;
@@ -174,12 +157,11 @@ function (_React$Component) {
 
               case 5:
                 result = _context.sent;
-                console.log(result);
                 return _context.abrupt("return", {
                   users: result
                 });
 
-              case 8:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -199,42 +181,22 @@ function (_React$Component) {
 
 
 /***/ }),
-
-/***/ 3:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/index.js");
-
-
-/***/ }),
-
-/***/ "@babel/runtime/regenerator":
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
-
-/***/ "isomorphic-unfetch":
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
-
-/***/ }),
-
-/***/ "next/link":
-/***/ (function(module, exports) {
-
-module.exports = require("next/link");
-
-/***/ }),
-
-/***/ "react":
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = require("react");
 
-/***/ })
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
 
-/******/ });
-//# sourceMappingURL=index.js.map
+module.exports = require("isomorphic-unfetch");
+
+/***/ })
+/******/ ]);
