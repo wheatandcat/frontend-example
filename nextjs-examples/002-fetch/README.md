@@ -9,7 +9,7 @@ yarn
 ## start
 
 ```
-yarn dev
+yarn dev -p 8080
 ```
 
 ## mock-server
@@ -19,3 +19,12 @@ cd ../mock-server
 npm run mock
 ```
 
+## DEMO
+https://nextjs-fetch.herokuapp.com/
+
+
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```

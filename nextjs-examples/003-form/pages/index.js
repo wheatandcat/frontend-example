@@ -1,8 +1,10 @@
 import React from "react";
 import "isomorphic-unfetch";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 const getUsers = async () => {
-  const response = await fetch("http://localhost:3000/users");
+  const response = await fetch(`${host}/users`);
   const result = await response.json();
 
   return { users: result };
@@ -47,7 +49,7 @@ export default class Index extends React.Component {
   };
 
   onSave = async () => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch(`${host}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -68,7 +70,7 @@ export default class Index extends React.Component {
   };
 
   onRemove = async id => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -87,8 +89,9 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>form</h1>
+      <div style={{ padding: "1rem" }}>
+        <h3>nextjs | 003-form</h3>
+        <h3>form</h3>
         名前:{" "}
         <input
           type="text"
@@ -105,20 +108,22 @@ export default class Index extends React.Component {
           value={1}
           checked={this.state.input.genderCode == 1}
           onChange={this.onInput}
-        />男性{" "}
+        />
+        男性{" "}
         <input
           type="radio"
           name="genderCode"
           value={2}
           checked={this.state.input.genderCode == 2}
           onChange={this.onInput}
-        />女性
+        />
+        女性
         <br />
         <br />
         <div>
           <button onClick={this.onSave}>登録</button>
         </div>
-        <h1>users</h1>
+        <h3>users</h3>
         <table border="1" style={{ width: "30rem" }}>
           <thead>
             <tr>
