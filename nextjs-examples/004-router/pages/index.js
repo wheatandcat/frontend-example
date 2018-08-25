@@ -1,9 +1,12 @@
 import React from "react";
 import "isomorphic-unfetch";
+import Link from "next/link";
 import Header from "../components/Header";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 const getUsers = async () => {
-  const response = await fetch("http://localhost:3000/users");
+  const response = await fetch(`${host}/users`);
   const result = await response.json();
 
   return { users: result };
@@ -27,7 +30,7 @@ export default class Index extends React.Component {
   }
 
   onRemove = async id => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`${host}/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -62,7 +65,11 @@ export default class Index extends React.Component {
           <tbody>
             {this.state.users.map((user, index) => (
               <tr key={index}>
-                <td>{user.id}</td>
+                <td>
+                  <Link href={`/userDetail?id=${user.id}`}>
+                    <a>{user.id}</a>
+                  </Link>
+                </td>
                 <td>{user.name}</td>
                 <td>{user.genderCode == "1" ? "男性" : "女性"}</td>
                 <td>

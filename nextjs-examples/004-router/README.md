@@ -9,7 +9,7 @@ yarn
 ## start
 
 ```
-yarn dev
+yarn dev -p 8080
 ```
 
 ## mock-server

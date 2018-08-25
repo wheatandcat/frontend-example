@@ -2,8 +2,10 @@ import React from "react";
 import "isomorphic-unfetch";
 import Header from "../components/Header";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 const getUser = async id => {
-  const response = await fetch(`http://localhost:3000/users/${id}`);
+  const response = await fetch(`${host}/users/${id}`);
   const result = await response.json();
 
   return { user: result };

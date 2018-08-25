@@ -22,3 +22,10 @@ npm run mock
 
 ## DEMO
 https://nextjs-form.herokuapp.com/
+
+
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```

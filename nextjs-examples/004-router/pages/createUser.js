@@ -3,6 +3,8 @@ import "isomorphic-unfetch";
 import Router from "next/router";
 import Header from "../components/Header";
 
+const host = process.env.HOST || "http://localhost:3000";
+
 export default class extends React.Component {
   state = {
     input: {
@@ -33,7 +35,7 @@ export default class extends React.Component {
   };
 
   onSave = async () => {
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch(`${host}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -71,14 +73,16 @@ export default class extends React.Component {
           value={1}
           checked={this.state.input.genderCode == 1}
           onChange={this.onInput}
-        />男性{" "}
+        />
+        男性{" "}
         <input
           type="radio"
           name="genderCode"
           value={2}
           checked={this.state.input.genderCode == 2}
           onChange={this.onInput}
-        />女性
+        />
+        女性
         <br />
         <br />
         <div>
