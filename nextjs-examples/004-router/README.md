@@ -22,3 +22,11 @@ npm run mock
 ## DEMO
 https://nextjs-router.herokuapp.com/
 
+
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```
+
+
