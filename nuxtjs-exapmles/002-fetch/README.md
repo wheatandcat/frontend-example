@@ -20,4 +20,7 @@ npm run mock
 npm run dev
 ```
 
+## Demo
+https://nuxtjs-fetch.herokuapp.com/
+
 
