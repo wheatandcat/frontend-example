@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h3>
-        001-simple
+        nuxt | 001-simple
       </h3>
       <br />
       <p>
