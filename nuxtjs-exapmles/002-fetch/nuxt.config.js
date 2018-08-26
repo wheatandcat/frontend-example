@@ -37,5 +37,8 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
+  },
+  env: {
+    host: process.env.BASE_URL || "http://localhost:3000"
   }
 };

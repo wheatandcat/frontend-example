@@ -1,9 +1,9 @@
 <template>
   <section class="container">
     <div>
-      <h1>
-        002-fetch
-      </h1>
+      <h3>
+        nuxt | 002-fetch
+      </h3>
       <br />
       <ul>
         <li v-for="user in $store.state.users" :key="user.id">
@@ -17,9 +17,11 @@
 <script>
 import axios from "axios";
 
+const host = process.env.host || "http://localhost:3000";
+
 export default {
   async fetch({ store, params }) {
-    let { data } = await axios.get("http://localhost:3000/users");
+    let { data } = await axios.get(`${host}/users`);
 
     store.commit("setUsers", data);
   }

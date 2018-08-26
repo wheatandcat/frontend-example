@@ -1,23 +1,23 @@
-# 002-fetch
+# example
 
-> Nuxt.js project
+## init
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install # Or yarn install
-
-# serve with hot reload at localhost:3333
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+```
+npm i
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## mock-server
+
+```
+cd ../mock-server
+npm run mock
+```
+
+
+## start
+
+```
+npm run dev
+```
+
 

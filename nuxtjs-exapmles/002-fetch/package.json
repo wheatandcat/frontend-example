@@ -5,9 +5,9 @@
   "author": "“wheatandcat” <wheatandcat@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "HOST=0.0.0.0 PORT=3333 nuxt",
+    "build": "BASE_URL=https://mock-server-yznxmkzmvo.now.sh nuxt build",
+    "start": "BASE_URL=https://mock-server-yznxmkzmvo.now.sh nuxt start",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
