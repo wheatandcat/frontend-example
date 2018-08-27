@@ -20,6 +20,13 @@ npm run test
 ```
 
 ## DEMO
-https://high-lan.glitch.me/
+https://preact-router.herokuapp.com/
+
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```
+
 
 
