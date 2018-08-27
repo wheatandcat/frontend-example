@@ -1,7 +1,11 @@
 <template>
   <section class="container">
     <div>
-      <h1>form</h1>
+      <h3>
+        nuxt | 003-form
+      </h3>
+      <br />
+      <h3>form</h3>
       <br />
           名前:
       <input v-model="input.name" placeholder="name"/>
@@ -17,7 +21,8 @@
       <button v-on:click="save">登録</button>
       <br />
       <br />
-      <h1>users</h1>
+      <h3>users</h3>
+      <br />
       <table border="1" style="width:30rem">
         <tr>
           <th>id</th>
@@ -41,6 +46,8 @@
 <script>
 import axios from "axios";
 
+const host = process.env.host || "http://localhost:3000";
+
 export default {
   data() {
     return {
@@ -51,18 +58,18 @@ export default {
     };
   },
   async fetch({ store, params }) {
-    let { data } = await axios.get("http://localhost:3000/users");
+    let { data } = await axios.get(`${host}/users`);
 
     store.commit("setUsers", data);
   },
   methods: {
     getItems: async function() {
-      let { data } = await axios.get("http://localhost:3000/users");
+      let { data } = await axios.get(`${host}/users`);
 
       this.$store.commit("setUsers", data);
     },
     save: async function() {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch(`${host}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -83,7 +90,7 @@ export default {
       this.getItems();
     },
     remove: async function(id) {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`${host}/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"

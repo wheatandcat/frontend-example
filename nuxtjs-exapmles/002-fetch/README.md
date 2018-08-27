@@ -24,3 +24,11 @@ npm run dev
 https://nuxtjs-fetch.herokuapp.com/
 
 
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```
+
+
+
