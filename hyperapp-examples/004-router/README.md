@@ -21,8 +21,8 @@ cd ../mock-server
 npm run mock
 ```
 
-## DEMO
-https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/004-router/index.html?v=2
+## DEMO　(heroku)
+https://hyperapp-router.herokuapp.com/
 
 ### Demo Deploy
 
