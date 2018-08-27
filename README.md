@@ -1,10 +1,6 @@
 # frontend-examples
 
 
-## Demo Deploy
+## demos link
 
-
- * Example command
-```
-sh now.sh hyperapp-examples/001-simple/dist
-```
+ * https://wheatandcat.github.io/examples-pages/frontend-example/portal/index.html?v=1

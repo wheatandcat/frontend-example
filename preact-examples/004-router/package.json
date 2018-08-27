@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
-    "serve": "preact build && preact serve",
+    "start": "serve -s build",
+    "build": "PREACT_APP_HOST=https://mock-server-yznxmkzmvo.now.sh preact build",
     "dev": "preact watch",
-    "test": "jest ./tests"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor"
@@ -29,7 +28,8 @@
     "history": "^4.7.2",
     "preact": "^8.2.6",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.5.7"
+    "preact-router": "^2.5.7",
+    "serve": "^10.0.0"
   },
   "jest": {
     "verbose": true,

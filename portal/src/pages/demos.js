@@ -134,30 +134,26 @@ const demos = [
     items: [
       {
         name: "001-simple",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/001-simple/index.html",
+        demo: "https://nuxtjs-simple.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nuxtjs-exapmles/001-simple"
       },
       {
         name: "002-fetch",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/002-fetch/index.html",
+        demo: "https://nuxtjs-fetch.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nuxtjs-exapmles/002-fetch"
       },
       {
         name: "003-form",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/003-form/index.html",
+        demo: "https://nuxtjs-form.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/nuxtjs-exapmles/003-form"
       },
       {
         name: "004-router",
         demo: "https://high-lan.glitch.me/",
-        source:
-          "https://github.com/wheatandcat/frontend-example/tree/master/nuxtjs-exapmles/004-router"
+        source: "https://nuxtjs-router.herokuapp.com/"
       }
     ]
   },

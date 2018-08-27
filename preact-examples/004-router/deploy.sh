@@ -2,12 +2,13 @@
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
 ROOT_DIR=preact-examples
 DIR=004-router
+APP=preact-router
 
-rm -rf dist/*
-PREACT_APP_HOST=${MOCK_HOST} npm run build
-rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-cp -R build/* ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-sed -i -e "s/src=\"/\src=\"\./g" ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
-sed -i -e "s/href=\"/\href=\"\./g" ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
-open ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
+heroku create ${APP}
+heroku buildpacks:add -a ${APP} https://github.com/lstoll/heroku-buildpack-monorepo
+heroku config:add APP_BASE=${ROOT_DIR}/${DIR} -a ${APP}
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/nodejs
+heroku git:remote -a ${APP}
+git push heroku master
+open https://${APP}.herokuapp.com 

@@ -7,7 +7,7 @@ export default class extends Component {
   state = {
     input: {
       name: "",
-      genderCode: 1
+      genderCode: "1"
     }
   };
 
@@ -58,16 +58,16 @@ export default class extends Component {
         <input
           type="radio"
           name="genderCode"
-          value={1}
-          checked={this.state.input.genderCode == 1}
+          value="1"
+          checked={this.state.input.genderCode === "1"}
           onChange={this.onInput}
         />
         男性{" "}
         <input
           type="radio"
           name="genderCode"
-          value={2}
-          checked={this.state.input.genderCode == 2}
+          value="2"
+          checked={this.state.input.genderCode === "2"}
           onChange={this.onInput}
         />
         女性
