@@ -21,7 +21,8 @@
   "homepage": "https://github.com/wheatandcat/hyperapp-examples#readme",
   "dependencies": {
     "@hyperapp/router": "^0.7.0",
-    "hyperapp": "^1.2.6"
+    "hyperapp": "^1.2.6",
+    "serve": "^10.0.0"
   },
   "devDependencies": {
     "babel-preset-hyperapp": "^2.3.0",
