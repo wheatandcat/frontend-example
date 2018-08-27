@@ -91,7 +91,7 @@ const demos = [
       },
       {
         name: "004-router",
-        demo: "https://high-lan.glitch.me/",
+        demo: "https://preact-router.herokuapp.com/",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/preact-examples/004-router"
       }

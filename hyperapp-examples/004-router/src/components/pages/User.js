@@ -2,6 +2,7 @@ import { h } from "hyperapp";
 
 export default ({ match }) => (state, actions) => (
   <main oncreate={() => actions.getUser(match.params.userId)}>
+    <h3>user</h3>
     {state.user.data ? (
       <table border="1" style={{ width: "30rem" }}>
         <tr>

@@ -9,6 +9,7 @@ export default () => (state, actions) => {
 
   return (
     <main oncreate={actions.resetCreateUserInput}>
+      <h3>form</h3>
       名前:{" "}
       <input
         type="text"

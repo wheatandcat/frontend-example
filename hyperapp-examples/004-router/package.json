@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./src/index.html --open",
-    "build": "parcel build --no-minify ./src/index.html",
-    "build-server": "http-server -o -d dist"
+    "start": "serve -s dist",
+    "build": "HOST=https://mock-server-yznxmkzmvo.now.sh parcel build --no-minify ./src/index.html",
+    "dev": "parcel ./src/index.html --open"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "babel-preset-hyperapp": "^2.3.0",
-    "http-server": "^0.11.1",
     "parcel-bundler": "^1.9.7"
   }
 }

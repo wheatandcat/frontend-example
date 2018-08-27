@@ -72,7 +72,7 @@ class GuttersGrid extends React.Component {
                 {demo.items.map(item => (
                   <ListItem button>
                     <a
-                      href={`${item.demo}?v=abcd`}
+                      href={`${item.demo}?v=2018828`}
                       target="_blank"
                       rel="noreferrer noopener"
                     >

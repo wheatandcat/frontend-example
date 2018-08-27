@@ -10,7 +10,7 @@ npm i
 ## start
 
 ```
-npm start
+npm run dev
 open http://localhost:1234
 ```
 
@@ -19,13 +19,6 @@ open http://localhost:1234
 ```
 cd ../mock-server
 npm run mock
-```
-
-## build & run
-
-```
-npm run build
-npm run build-server
 ```
 
 ## DEMO
