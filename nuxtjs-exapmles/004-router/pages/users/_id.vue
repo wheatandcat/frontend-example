@@ -27,12 +27,14 @@
 import axios from "axios";
 import Header from "~/components/Header.vue";
 
+const host = process.env.host || "http://localhost:3000";
+
 export default {
   components: {
     Header
   },
   async fetch({ store, params }) {
-    let { data } = await axios.get(`http://localhost:3000/users/${params.id}`);
+    let { data } = await axios.get(`${host}/users/${params.id}`);
 
     store.commit("setUser", data);
   }

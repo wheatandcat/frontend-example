@@ -25,6 +25,8 @@ import axios from "axios";
 import Header from "~/components/Header.vue";
 import { log } from "util";
 
+const host = process.env.host || "http://localhost:3000";
+
 export default {
   components: {
     Header
@@ -39,7 +41,7 @@ export default {
   },
   methods: {
     save: async function() {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch(`${host}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

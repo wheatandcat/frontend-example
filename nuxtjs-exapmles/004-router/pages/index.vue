@@ -31,23 +31,25 @@
 import axios from "axios";
 import Header from "~/components/Header.vue";
 
+const host = process.env.host || "http://localhost:3000";
+
 export default {
   components: {
     Header
   },
   async fetch({ store, params }) {
-    let { data } = await axios.get("http://localhost:3000/users");
+    let { data } = await axios.get(`${host}/users`);
 
     store.commit("setUsers", data);
   },
   methods: {
     getItems: async function() {
-      let { data } = await axios.get("http://localhost:3000/users");
+      let { data } = await axios.get(`${host}/users`);
 
       this.$store.commit("setUsers", data);
     },
     remove: async function(id) {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`${host}/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
