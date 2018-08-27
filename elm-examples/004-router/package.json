@@ -1,0 +1,19 @@
+{
+  "name": "004-router",
+  "version": "1.0.0",
+  "description": "## mock-server",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "serve -s build",
+    "build": "ELM_APP_API_URL=https://mock-server-yznxmkzmvo.now.sh elm-app build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^10.0.0"
+  }
+}

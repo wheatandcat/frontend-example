@@ -2,12 +2,14 @@
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
 ROOT_DIR=elm-examples
 DIR=004-router
+APP=elm-router
 
-rm -rf build/*
-ELM_APP_API_URL=${MOCK_HOST} elm-app build
-rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-cp -R build/* ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}
-sed -i -e "s/src=\"/\src=\"\./g" ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
-sed -i -e "s/href=\"/\href=\"\./g" ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
-open ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/index.html
+heroku create ${APP}
+heroku buildpacks:add -a ${APP} https://github.com/lstoll/heroku-buildpack-monorepo
+heroku config:add APP_BASE=${ROOT_DIR}/${DIR} -a ${APP}
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add https://github.com/srid/heroku-buildpack-elm
+heroku git:remote -a ${APP}
+git push heroku master
+open https://${APP}.herokuapp.com 

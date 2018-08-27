@@ -25,8 +25,7 @@ const demos = [
       },
       {
         name: "004-router",
-        demo:
-          "https://wheatandcat.github.io/examples-pages/frontend-example/hyperapp-examples/004-router/index.html",
+        demo: "https://hyperapp-router.herokuapp.com/users",
         source:
           "https://github.com/wheatandcat/frontend-example/tree/master/hyperapp-examples/004-router"
       }
