@@ -22,4 +22,4 @@ PORT=3001 elm-app start
 ```
 
 ## Demo
-https://wheatandcat.github.io/examples-pages/frontend-example/elm-examples/004-router/index.html?v=1
+https://elm-router.herokuapp.com/

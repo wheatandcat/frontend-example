@@ -10,6 +10,7 @@ heroku config:add APP_BASE=${ROOT_DIR}/${DIR} -a ${APP}
 heroku buildpacks:add heroku/nodejs
 heroku buildpacks:add heroku/nodejs
 heroku buildpacks:add https://github.com/srid/heroku-buildpack-elm
+heroku buildpacks:add https://github.com/srid/heroku-buildpack-elm
 heroku git:remote -a ${APP}
 git push heroku master
 open https://${APP}.herokuapp.com 
