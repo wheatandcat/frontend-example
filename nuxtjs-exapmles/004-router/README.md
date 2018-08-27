@@ -1,23 +1,34 @@
-# 004-router
+# example
 
-> Nuxt.js project
+## init
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install # Or yarn install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+```
+npm i
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## mock-server
+
+```
+cd ../mock-server
+npm run mock
+```
+
+
+## start
+
+```
+npm run dev
+```
+
+## Demo
+https://nuxtjs-router.herokuapp.com/
+
+
+### Demo Deploy (heroku)
+
+```
+sh deploy.sh
+```
+
+
 
