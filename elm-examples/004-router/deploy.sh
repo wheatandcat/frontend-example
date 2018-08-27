@@ -11,6 +11,8 @@ heroku buildpacks:add heroku/nodejs
 heroku buildpacks:add heroku/nodejs
 heroku buildpacks:add https://github.com/srid/heroku-buildpack-elm
 heroku buildpacks:add https://github.com/srid/heroku-buildpack-elm
+heroku buildpacks:add https://github.com/hone/heroku-buildpack-static
+heroku buildpacks:add https://github.com/hone/heroku-buildpack-static
 heroku git:remote -a ${APP}
 git push heroku master
 open https://${APP}.herokuapp.com 
