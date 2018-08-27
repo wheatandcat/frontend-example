@@ -6,7 +6,8 @@
   "scripts": {
     "start": "serve -s dist",
     "build": "HOST=https://mock-server-yznxmkzmvo.now.sh parcel build --no-minify ./src/index.html",
-    "dev": "parcel ./src/index.html --open"
+    "dev": "parcel ./src/index.html --open",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
