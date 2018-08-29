@@ -19,3 +19,11 @@ npm run build
 ```
 npm run lint
 ```
+
+## DEMO
+https://vue-router.herokuapp.com/#/users
+
+# deploy
+```
+sh deploy.sh
+```
