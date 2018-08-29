@@ -1,20 +1,20 @@
 <template>
   <div id="app">
+    <h4>vue | 004-router</h4>
     <div id="nav">
       <router-link to="/users">Users</router-link> |
-      <router-link to="/createUser">CreateUser</router-link> 
+      <router-link to="/createUser">CreateUser</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#nav {
-  padding: 30px;
+#app {
+  padding: 1rem;
 }
 
 #nav a {
-  font-weight: bold;
   color: #2c3e50;
 }
 

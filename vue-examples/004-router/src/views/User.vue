@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>user</h1>
+    <h4>user</h4>
     <table border="1" style="width:30rem">
       <tr>
         <th>id</th>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+const host = process.env.VUE_APP_HOST || "http://localhost:3000";
+
 export default {
   name: "User",
   data() {
@@ -33,9 +35,7 @@ export default {
   },
   methods: {
     getItem: async function() {
-      const response = await fetch(
-        `http://localhost:3000/users/${this.$route.params.id}`
-      );
+      const response = await fetch(`${host}/users/${this.$route.params.id}`);
 
       if (!response.ok) {
         return alert("通信エラー");
@@ -48,5 +48,3 @@ export default {
 };
 </script>
 
-<style >
-</style>

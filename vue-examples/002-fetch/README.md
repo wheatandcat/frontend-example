@@ -1,4 +1,4 @@
-# 002_ui
+# 002-fetch
 
 ## Project setup
 ```
@@ -18,4 +18,11 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+## DEMO
+https://wheatandcat.github.io/examples-pages/frontend-example/vue-examples/002-fetch/index.html
+
+# deploy
+```
+sh deploy.sh
 ```

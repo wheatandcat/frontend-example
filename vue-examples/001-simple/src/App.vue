@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld />
+    <HelloWorld/>
   </div>
 </template>
 
@@ -15,4 +15,8 @@ export default {
 };
 </script>
 
-
+<style>
+#app {
+  padding: 1rem;
+}
+</style>

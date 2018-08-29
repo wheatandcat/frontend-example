@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <Items />
+    <h4>vue | 003-form</h4>
+    <Users />
   </div>
 </template>
 
 <script>
-import Items from "./components/Items.vue";
+import Users from "./components/Users.vue";
 
 export default {
   name: "app",
   components: {
-    Items
+    Users
   }
 };
 </script>
 
 <style>
+#app {
+  padding: 1rem;
+}
 </style>

@@ -1,9 +1,8 @@
 <template>
   <div>
-    <h1>form</h1>
+    <h4>form</h4>
     名前:
     <input v-model="input.name" placeholder="name"/>
-    <br />
     <br />
     性別:
     <input type="radio" id="male" value="1" v-model="input.genderCode" />
@@ -17,6 +16,8 @@
 </template>
 
 <script>
+const host = process.env.VUE_APP_HOST || "http://localhost:3000";
+
 export default {
   name: "CreateUser",
   data() {
@@ -29,7 +30,7 @@ export default {
   },
   methods: {
     save: async function() {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch(`${host}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -50,5 +51,3 @@ export default {
 };
 </script>
 
-<style >
-</style>

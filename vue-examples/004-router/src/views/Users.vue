@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>users</h1>
+    <h4>users</h4>
     <table border="1" style="width:30rem">
       <tr>
         <th>id</th>
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+const host = process.env.VUE_APP_HOST || "http://localhost:3000";
+
 export default {
   name: "Users",
   data() {
@@ -33,7 +35,7 @@ export default {
   },
   methods: {
     getItems: async function() {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch(`${host}/users`);
 
       if (!response.ok) {
         return alert("通信エラー");
@@ -43,7 +45,7 @@ export default {
       this.items = result;
     },
     remove: async function(id) {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`${host}/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -59,6 +61,3 @@ export default {
   }
 };
 </script>
-
-<style >
-</style>

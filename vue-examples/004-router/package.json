@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "VUE_APP_HOST=https://mock-server-yznxmkzmvo.now.sh vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "VUE_APP_HOST=https://mock-server-yznxmkzmvo.now.sh vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "vue": "^2.5.16",

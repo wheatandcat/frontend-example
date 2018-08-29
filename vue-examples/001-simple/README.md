@@ -1,4 +1,4 @@
-# 001_simple
+# 001-simple
 
 ## Project setup
 ```
@@ -18,4 +18,12 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+## DEMO
+https://wheatandcat.github.io/examples-pages/frontend-example/vue-examples/001-simple/index.html
+
+# deploy
+```
+sh deploy.sh
 ```
