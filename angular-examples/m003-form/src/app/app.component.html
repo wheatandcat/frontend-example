@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="padding: 1rem">
+  <div>
+    <h4>angular | m003-form</h4>
+    <h4>form</h4>
+    名前:
+    <input name="name" placeholder="name" [(ngModel)]="model.name" />
+    <br />
+    <br />
+    性別:
+    <input type="radio" id="male" name="genderCode" [value]="1" [(ngModel)]="model.genderCode" [checked]="model.genderCode === 1" />
+    <label for="male" style="padding-right:8px">男性</label>
+    <input type="radio" id="female" name="genderCode" [value]="2" [(ngModel)]="model.genderCode" [checked]="model.genderCode === 2" />
+    <label for="female">女性</label>
+    <br />
+    <br />
+    <button (click)="onCreate()">登録</button>
+    <br />
+    <br />
+    <br />
+    <table border="1" style="width:30rem">
+      <tr>
+        <th>id</th>
+        <th>名前</th>
+        <th>性別</th>
+        <th>action</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>
+          {{user.id}}
+        </td>
+        <td>
+          {{user.name}}
+        </td>
+        <td>
+          {{user.genderCode === "1" ? "男性" : "女性" }}
+        </td>
+        <td>
+          <button (click)="onDelete(user.id)">削除</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

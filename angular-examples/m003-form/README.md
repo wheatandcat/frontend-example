@@ -1,4 +1,4 @@
-# 002-fetch
+# 003-form
 
 ## Project setup
 ```
@@ -14,12 +14,11 @@ npm start
 
 ```
 npm run build -- --prod
-serve -s dist/m002-fetch/
+serve -s dist/m003-form/
 ```
 
-
 ### demo
-https://wheatandcat.github.io/examples-pages/frontend-example/angular-examples/m002-fetch/index.html
+https://wheatandcat.github.io/examples-pages/frontend-example/angular-examples/m003-form/index.html
 
 ### deploy
 ```
