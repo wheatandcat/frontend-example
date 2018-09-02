@@ -2,7 +2,7 @@
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
 ROOT_DIR=angular-examples
 DIR=m004-router
-APP=angular-router
+APP=angular-m004-router
 
 heroku create ${APP}
 heroku buildpacks:add -a ${APP} https://github.com/lstoll/heroku-buildpack-monorepo
