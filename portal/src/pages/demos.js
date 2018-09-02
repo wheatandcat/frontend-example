@@ -146,23 +146,23 @@ const demos = [{
     name: "angular",
     items: [{
         name: "001-simple",
-        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/001-simple/index.html",
-        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/001-simple"
+        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/angular-examples/m001-simple/index.html",
+        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/m001-simple"
       },
       {
         name: "002-fetch",
-        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/002-fetch/index.html",
-        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/002-fetch"
+        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/angular-examples/m002-fetch/index.html",
+        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/m002-fetch"
       },
       {
         name: "003-form",
-        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/preact-examples/003-form/index.html",
-        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/003-form"
+        demo: "https://wheatandcat.github.io/examples-pages/frontend-example/angular-examples/m003-form/index.html",
+        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/m003-form"
       },
       {
         name: "004-router",
-        demo: "https://high-lan.glitch.me/",
-        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/004-router"
+        demo: "https://angular-m004-router.herokuapp.com/",
+        source: "https://github.com/wheatandcat/frontend-example/tree/master/angular-examples/m004-router"
       }
     ]
   }

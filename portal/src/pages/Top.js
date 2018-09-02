@@ -60,8 +60,8 @@ class GuttersGrid extends React.Component {
               <img
                 src={require(`./${demo.name}.png`)}
                 style={{
-                  width: "100px",
-                  height: "100px"
+                  width: "10rem",
+                  height: "10rem"
                 }}
               />
               <List
@@ -70,7 +70,7 @@ class GuttersGrid extends React.Component {
                 }
               >
                 {demo.items.map(item => (
-                  <ListItem button>
+                  <ListItem button key={item.demo}>
                     <a
                       href={`${item.demo}?v=2018828`}
                       target="_blank"
