@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { environment } from "../environments/environment";
-import { catchError, map, tap } from "rxjs/operators";
-import { Observable, Subject } from "rxjs";
 import { User } from "./user";
 
 interface UserType {
@@ -22,10 +20,6 @@ const httpOptions = {
 })
 export class AppComponent implements OnInit {
   users: UserType[];
-  input: {
-    name: string;
-    genderCode: string;
-  };
 
   model = new User("", 1);
 

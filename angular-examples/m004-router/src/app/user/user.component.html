@@ -1,0 +1,21 @@
+<div>
+  <h4>users</h4>
+  <table border="1" style="width:30rem">
+    <tr>
+      <th>id</th>
+      <th>名前</th>
+      <th>性別</th>
+    </tr>
+    <tr>
+      <td>
+        {{user.id}}
+      </td>
+      <td>
+        {{user.name}}
+      </td>
+      <td>
+        {{user.genderCode === "1" ? "男性" : "女性" }}
+      </td>
+    </tr>
+  </table>
+</div>
