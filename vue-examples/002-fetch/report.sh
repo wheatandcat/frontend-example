@@ -1,7 +1,7 @@
 #!/bin/bas
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
 ROOT_DIR=vue-examples
-DIR=001-simple
+DIR=002-fetch
 
 rm -rf build/*
 VUE_APP_HOST=${MOCK_HOST} npm run build -- --report

@@ -9,6 +9,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import Code from "@material-ui/icons/Code";
 import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
 import demos from "./demos";
 
 const styles = theme => ({
@@ -40,6 +41,13 @@ class GuttersGrid extends React.Component {
 
     return (
       <div>
+        <img
+          src={
+            "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/7500664/rectangle_large_type_2_961dfe37189f582ff83b1c96dbda5ff5.jpg"
+          }
+          style={{ width: "100%", maxWidth: "64rem", paddingTop: "1rem" }}
+          alt="top"
+        />
         <div
           style={{
             display: "flex",
@@ -63,6 +71,7 @@ class GuttersGrid extends React.Component {
                   width: "10rem",
                   height: "10rem"
                 }}
+                alt="demo"
               />
               <List
                 subheader={
@@ -79,15 +88,17 @@ class GuttersGrid extends React.Component {
                       <ListItemText primary={`demo ${item.name}`} />
                     </a>
                     <ListItemSecondaryAction>
-                      <a
-                        href={item.source}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        <IconButton aria-label="Code">
-                          <Code />
-                        </IconButton>
-                      </a>
+                      <Tooltip title="src" placement="top">
+                        <a
+                          href={item.source}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <IconButton aria-label="Code">
+                            <Code />
+                          </IconButton>
+                        </a>
+                      </Tooltip>
                     </ListItemSecondaryAction>
                   </ListItem>
                 ))}

@@ -4,7 +4,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Top from "./pages/Top";
+import { Router } from "@reach/router";
+import Top from "./pages/Top/Page";
+import Analyzer from "./pages/Analyzer/Page";
 import "./App.css";
 
 class App extends Component {
@@ -34,13 +36,10 @@ class App extends Component {
         </AppBar>
         <Root>
           <Content>
-            <img
-              src={
-                "https://d2l930y2yx77uc.cloudfront.net/production/uploads/images/7500664/rectangle_large_type_2_961dfe37189f582ff83b1c96dbda5ff5.jpg"
-              }
-              style={{ width: "100%", maxWidth: "64rem", paddingTop: "1rem" }}
-            />
-            <Top />
+            <Router>
+              <Top path="/" />
+              <Analyzer path="analyzer" />
+            </Router>
           </Content>
         </Root>
       </div>
