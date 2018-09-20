@@ -39,10 +39,12 @@ const analyzer = items => {
     .map(item => item.transferSize);
 
   return {
-    Stylesheet: Stylesheets.reduce((previous, current) => previous + current),
-    Script: Scripts.reduce((previous, current) => previous + current),
-    Document: Documents.reduce((previous, current) => previous + current),
-    Other: Others.reduce((previous, current) => previous + current)
+    Stylesheet:
+      Stylesheets.reduce((previous, current) => previous + current) / 1000,
+    Script: Scripts.reduce((previous, current) => previous + current) / 1000,
+    Document:
+      Documents.reduce((previous, current) => previous + current) / 1000,
+    Other: Others.reduce((previous, current) => previous + current) / 1000
   };
 };
 

@@ -14,7 +14,11 @@
         </thead>
         <tbody>
           <tr v-for="user in $store.state.users" :key="user.id">
-            <td>{{user.id}}</td>
+            <td>
+              <router-link v-bind:to="'/users/' + user.id">
+                {{user.id}}
+              </router-link>
+            </td>
             <td>{{user.name}}</td>
             <td>{{user.genderCode == "1" ? "男性" : "女性"}}</td>
             <td>
