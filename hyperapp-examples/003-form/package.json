@@ -24,6 +24,7 @@
   "devDependencies": {
     "babel-preset-hyperapp": "^2.3.0",
     "http-server": "^0.11.1",
-    "parcel-bundler": "^1.9.7"
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-bundle-visualiser": "^1.2.0"
   }
 }

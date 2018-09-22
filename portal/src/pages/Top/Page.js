@@ -66,7 +66,7 @@ class GuttersGrid extends React.Component {
               style={{ margin: "2rem", padding: "1rem" }}
             >
               <img
-                src={require(`./${demo.name}.png`)}
+                src={require(`../../images/${demo.name}.png`)}
                 style={{
                   width: "10rem",
                   height: "10rem"

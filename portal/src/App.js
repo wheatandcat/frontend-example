@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import { Router } from "@reach/router";
+import { Router, Link } from "@reach/router";
 import Top from "./pages/Top/Page";
 import Analyzer from "./pages/Analyzer/Page";
 import "./App.css";
@@ -23,8 +23,12 @@ class App extends Component {
               color="inherit"
               style={{ flexGrow: 1 }}
             >
-              フロントエンド技術ポータル
+              <Link to="/">フロントエンド技術ポータル</Link>
             </Typography>
+
+            <Link to="/analyzer">
+              <Button>Analyzer</Button>
+            </Link>
             <Button
               href="https://github.com/wheatandcat/frontend-example"
               target="_blank"
