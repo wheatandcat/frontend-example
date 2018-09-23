@@ -130,7 +130,7 @@ function (_React$Component) {
         style: {
           padding: "1rem"
         }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "nextjs | 001-simple"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "users"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, this.props.users.map(function (user, index) {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "nextjs | 002-fetch"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h3", null, "users"), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("ul", null, this.props.users.map(function (user, index) {
         return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("li", {
           key: index
         }, user.name);

@@ -46,3 +46,39 @@ mkdir -p src/data/${ELM_DIR}/003-form
 cp ../../examples-pages/frontend-example/${ELM_DIR}/003-form/report/report.json src/data/${ELM_DIR}/003-form/report.json
 mkdir -p src/data/${ELM_DIR}/004-router
 cp ../../examples-pages/frontend-example/${ELM_DIR}/004-router/report/report.json src/data/${ELM_DIR}/004-router/report.json
+
+ANGULAR_DIR=angular-examples
+
+rm -rf src/data/${ANGULAR_DIR}
+mkdir -p src/data/${ANGULAR_DIR}/m001-simple
+cp ../../examples-pages/frontend-example/${ANGULAR_DIR}/m001-simple/report/report.json src/data/${ANGULAR_DIR}/m001-simple/report.json
+mkdir -p src/data/${ANGULAR_DIR}/m002-fetch
+cp ../../examples-pages/frontend-example/${ANGULAR_DIR}/m002-fetch/report/report.json src/data/${ANGULAR_DIR}/m002-fetch/report.json
+mkdir -p src/data/${ANGULAR_DIR}/m003-form
+cp ../../examples-pages/frontend-example/${ANGULAR_DIR}/m003-form/report/report.json src/data/${ANGULAR_DIR}/m003-form/report.json
+mkdir -p src/data/${ANGULAR_DIR}/m004-router
+cp ../../examples-pages/frontend-example/${ANGULAR_DIR}/m004-router/report/report.json src/data/${ANGULAR_DIR}/m004-router/report.json
+
+NEXT_DIR=nextjs-examples
+
+rm -rf src/data/${NEXT_DIR}
+mkdir -p src/data/${NEXT_DIR}/001-simple
+cp ../../examples-pages/frontend-example/${NEXT_DIR}/001-simple/report/report.json src/data/${NEXT_DIR}/001-simple/report.json
+mkdir -p src/data/${NEXT_DIR}/002-fetch
+cp ../../examples-pages/frontend-example/${NEXT_DIR}/002-fetch/report/report.json src/data/${NEXT_DIR}/002-fetch/report.json
+mkdir -p src/data/${NEXT_DIR}/003-form
+cp ../../examples-pages/frontend-example/${NEXT_DIR}/003-form/report/report.json src/data/${NEXT_DIR}/003-form/report.json
+mkdir -p src/data/${NEXT_DIR}/004-router
+cp ../../examples-pages/frontend-example/${NEXT_DIR}/004-router/report/report.json src/data/${NEXT_DIR}/004-router/report.json
+
+
+PREACT_DIR=preact-examples
+
+mkdir -p src/data/${PREACT_DIR}/001-simple
+cp ../../examples-pages/frontend-example/${PREACT_DIR}/001-simple/report/report.json src/data/${PREACT_DIR}/001-simple/report.json
+mkdir -p src/data/${PREACT_DIR}/002-fetch
+cp ../../examples-pages/frontend-example/${PREACT_DIR}/002-fetch/report/report.json src/data/${PREACT_DIR}/002-fetch/report.json
+mkdir -p src/data/${PREACT_DIR}/003-form
+cp ../../examples-pages/frontend-example/${PREACT_DIR}/003-form/report/report.json src/data/${PREACT_DIR}/003-form/report.json
+mkdir -p src/data/${PREACT_DIR}/004-router
+cp ../../examples-pages/frontend-example/${PREACT_DIR}/004-router/report/report.json src/data/${PREACT_DIR}/004-router/report.json

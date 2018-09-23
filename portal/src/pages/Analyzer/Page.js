@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import Paper from "@material-ui/core/Paper";
 
-const jsItems = ["vue", "hyperapp", "nuxt", "elm"];
+const jsItems = ["vue", "angular", "nuxt", "next", "hyperapp", "preact", "elm"];
 
 const reports = {
   vue: {
@@ -47,6 +47,33 @@ const reports = {
       "002-fetch": require("../../data/elm-examples/002-fetch/report"),
       "003-form": require("../../data/elm-examples/003-form/report"),
       "004-router": require("../../data/elm-examples/004-router/report")
+    }
+  },
+  angular: {
+    icon: "angular",
+    data: {
+      "001-simple": require("../../data/angular-examples/m001-simple/report"),
+      "002-fetch": require("../../data/angular-examples/m002-fetch/report"),
+      "003-form": require("../../data/angular-examples/m003-form/report"),
+      "004-router": require("../../data/angular-examples/m004-router/report")
+    }
+  },
+  next: {
+    icon: "nextjs",
+    data: {
+      "001-simple": require("../../data/nextjs-examples/001-simple/report"),
+      "002-fetch": require("../../data/nextjs-examples/002-fetch/report"),
+      "003-form": require("../../data/nextjs-examples/003-form/report"),
+      "004-router": require("../../data/nextjs-examples/004-router/report")
+    }
+  },
+  preact: {
+    icon: "preact",
+    data: {
+      "001-simple": require("../../data/preact-examples/001-simple/report"),
+      "002-fetch": require("../../data/preact-examples/002-fetch/report"),
+      "003-form": require("../../data/preact-examples/003-form/report"),
+      "004-router": require("../../data/preact-examples/004-router/report")
     }
   }
 };
@@ -165,7 +192,6 @@ export default class extends React.Component {
               <Bar dataKey="Script" stackId="a" fill="#ffd700" />
               <Bar dataKey="Stylesheet" stackId="a" fill="#98fb98" />
               <Bar dataKey="Document" stackId="a" fill="#4169e1" />
-              <Bar dataKey="Other" stackId="a" fill="#c0c0c0" />
             </BarChart>
           </Paper>
         ))}
