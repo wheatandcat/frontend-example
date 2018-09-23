@@ -23,7 +23,7 @@ cp ../../examples-pages/frontend-example/${HEPAERAPP_DIR}/003-form/report/report
 mkdir -p src/data/${HEPAERAPP_DIR}/004-router
 cp ../../examples-pages/frontend-example/${HEPAERAPP_DIR}/004-router/report/report.json src/data/${HEPAERAPP_DIR}/004-router/report.json
 
-NUXT_DIR=nuxtjs-exapmles
+NUXT_DIR=nuxtjs-examples
 
 rm -rf src/data/${NUXT_DIR}
 mkdir -p src/data/${NUXT_DIR}/001-simple
@@ -34,3 +34,15 @@ mkdir -p src/data/${NUXT_DIR}/003-form
 cp ../../examples-pages/frontend-example/${NUXT_DIR}/003-form/report/report.json src/data/${NUXT_DIR}/003-form/report.json
 mkdir -p src/data/${NUXT_DIR}/004-router
 cp ../../examples-pages/frontend-example/${NUXT_DIR}/004-router/report/report.json src/data/${NUXT_DIR}/004-router/report.json
+
+ELM_DIR=elm-examples
+
+rm -rf src/data/${ELM_DIR}
+mkdir -p src/data/${ELM_DIR}/001-simple
+cp ../../examples-pages/frontend-example/${ELM_DIR}/001-simple/report/report.json src/data/${ELM_DIR}/001-simple/report.json
+mkdir -p src/data/${ELM_DIR}/002-fetch
+cp ../../examples-pages/frontend-example/${ELM_DIR}/002-fetch/report/report.json src/data/${ELM_DIR}/002-fetch/report.json
+mkdir -p src/data/${ELM_DIR}/003-form
+cp ../../examples-pages/frontend-example/${ELM_DIR}/003-form/report/report.json src/data/${ELM_DIR}/003-form/report.json
+mkdir -p src/data/${ELM_DIR}/004-router
+cp ../../examples-pages/frontend-example/${ELM_DIR}/004-router/report/report.json src/data/${ELM_DIR}/004-router/report.json

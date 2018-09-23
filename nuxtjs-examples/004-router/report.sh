@@ -1,7 +1,7 @@
 #!/bin/bas
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
-ROOT_DIR=nuxtjs-exapmles
-DIR=002-fetch
+ROOT_DIR=nuxtjs-examples
+DIR=004-router
 
 rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report

@@ -1,8 +1,8 @@
 #!/bin/bas
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
-ROOT_DIR=nuxtjs-exapmles
-DIR=001-simple
-APP=nuxtjs-simple
+ROOT_DIR=nuxtjs-examples
+DIR=003-form
+APP=nuxtjs-form
 
 heroku create ${APP}
 heroku buildpacks:add -a ${APP} https://github.com/lstoll/heroku-buildpack-monorepo

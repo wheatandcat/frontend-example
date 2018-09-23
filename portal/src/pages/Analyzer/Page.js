@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import Paper from "@material-ui/core/Paper";
 
-const jsItems = ["vue", "hyperapp", "nuxt"];
+const jsItems = ["vue", "hyperapp", "nuxt", "elm"];
 
 const reports = {
   vue: {
@@ -34,10 +34,19 @@ const reports = {
   nuxt: {
     icon: "nuxtjs",
     data: {
-      "001-simple": require("../../data/nuxtjs-exapmles/001-simple/report"),
-      "002-fetch": require("../../data/nuxtjs-exapmles/002-fetch/report"),
-      "003-form": require("../../data/nuxtjs-exapmles/003-form/report"),
-      "004-router": require("../../data/nuxtjs-exapmles/004-router/report")
+      "001-simple": require("../../data/nuxtjs-examples/001-simple/report"),
+      "002-fetch": require("../../data/nuxtjs-examples/002-fetch/report"),
+      "003-form": require("../../data/nuxtjs-examples/003-form/report"),
+      "004-router": require("../../data/nuxtjs-examples/004-router/report")
+    }
+  },
+  elm: {
+    icon: "elm",
+    data: {
+      "001-simple": require("../../data/elm-examples/001-simple/report"),
+      "002-fetch": require("../../data/elm-examples/002-fetch/report"),
+      "003-form": require("../../data/elm-examples/003-form/report"),
+      "004-router": require("../../data/elm-examples/004-router/report")
     }
   }
 };
@@ -55,9 +64,11 @@ const analyzer = items => {
     .filter(item => item.mimeType === "text/html")
     .map(item => item.transferSize);
 
+  /*
   const Others = items
     .filter(item => item.mimeType === "image/x-icon")
     .map(item => item.transferSize);
+  */
 
   const stylesheet =
     Stylesheets.length > 0
@@ -71,16 +82,18 @@ const analyzer = items => {
     Documents.length > 0
       ? Documents.reduce((previous, current) => previous + current)
       : null;
+  /*
   const other =
     Others.length > 0
       ? Others.reduce((previous, current) => previous + current)
       : null;
+  */
 
   return {
     Stylesheet: stylesheet ? stylesheet / 1000 : 0,
     Script: script ? script / 1000 : 0,
-    Document: document ? document / 1000 : 0,
-    Other: other ? other / 1000 : 0
+    Document: document ? document / 1000 : 0
+    //Other: other ? other / 1000 : 0
   };
 };
 
