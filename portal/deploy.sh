@@ -1,12 +1,13 @@
 #!/bin/bas
 MOCK_HOST=https://mock-server-yznxmkzmvo.now.sh
 ROOT_DIR=portal
+APP=js-portal-site
 
-rm -rf build/*
-npm run build
-rm -rf ../../examples-pages/frontend-example/${ROOT_DIR}
-mkdir -p ../../examples-pages/frontend-example/${ROOT_DIR}
-cp -R build/* ../../examples-pages/frontend-example/${ROOT_DIR}
-sed -i -e "s/src=\"/\src=\"\./g" ../../examples-pages/frontend-example/${ROOT_DIR}/index.html
-sed -i -e "s/href=\"/\href=\"\./g" ../../examples-pages/frontend-example/${ROOT_DIR}/index.html
-open ../../examples-pages/frontend-example/${ROOT_DIR}/index.html
+heroku create ${APP}
+heroku buildpacks:add -a ${APP} https://github.com/lstoll/heroku-buildpack-monorepo
+heroku config:add APP_BASE=${ROOT_DIR} -a ${APP}
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/nodejs
+heroku git:remote -a ${APP}
+git push heroku master
+open https://${APP}.herokuapp.com 
