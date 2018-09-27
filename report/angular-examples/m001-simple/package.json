@@ -1,0 +1,14 @@
+{
+  "name": "report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-bundle-analyzer stats.json"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.0.2"
+  }
+}
