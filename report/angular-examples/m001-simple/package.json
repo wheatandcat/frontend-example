@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-bundle-analyzer stats.json"
+    "start": "webpack-bundle-analyzer stats.json -m static -r report.html"
   },
   "author": "",
   "license": "MIT",

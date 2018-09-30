@@ -7,7 +7,9 @@ rm -rf dist/*
 npm run report
 rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
-cp dist/${DIR}/stats.json ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
+npm run build -- --prod --stats-json
+webpack-bundle-analyzer dist/${DIR}/stats.json -m static -r report.html --no-open 
+mv report.html ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report/report.html
 
 rm -rf dist/*
 npm run build -- --prod
