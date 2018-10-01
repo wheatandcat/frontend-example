@@ -19,6 +19,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: {
+      analyzerMode: "static"
+    },
     /*
     ** Run ESLint on save
     */

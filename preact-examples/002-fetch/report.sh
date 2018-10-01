@@ -7,7 +7,8 @@ rm -rf build/*
 npm run build -- --json
 rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
-cp stats.json ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
+webpack-bundle-analyzer stats.json -m static -r report.html --no-open 
+mv report.html ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report/report.html
 
 rm -rf build/*
 PREACT_APP_HOST=${MOCK_HOST} npm run build

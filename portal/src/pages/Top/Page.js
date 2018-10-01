@@ -8,6 +8,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import Code from "@material-ui/icons/Code";
+import ListAlt from "@material-ui/icons/ListAlt";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import demos from "./demos";
@@ -99,6 +100,19 @@ class GuttersGrid extends React.Component {
                           </IconButton>
                         </a>
                       </Tooltip>
+                      {item.analyzer !== "" ? (
+                        <Tooltip title="analyzer" placement="top">
+                          <a
+                            href={item.analyzer}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          >
+                            <IconButton aria-label="ListAlt">
+                              <ListAlt />
+                            </IconButton>
+                          </a>
+                        </Tooltip>
+                      ) : null}
                     </ListItemSecondaryAction>
                   </ListItem>
                 ))}

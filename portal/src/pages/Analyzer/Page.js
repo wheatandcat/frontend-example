@@ -9,6 +9,7 @@ import {
   Legend
 } from "recharts";
 import Paper from "@material-ui/core/Paper";
+import Divider from "@material-ui/core/Divider";
 
 const jsItems = ["vue", "angular", "nuxt", "next", "hyperapp", "preact", "elm"];
 
@@ -155,46 +156,108 @@ const data = name => {
   ];
 };
 
+const totalData = name => {
+  return jsItems.map(item => ({
+    name: item,
+    ...analyzer(
+      reports[item].data[name].audits["network-requests"].details.items
+    )
+  }));
+};
+
 export default class extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignContent: "flex-start",
-          paddingRight: "5rem",
-          paddingLeft: "5rem",
-          width: "80%"
-        }}
-      >
-        {jsItems.map(name => (
-          <Paper style={{ margin: "2rem" }} key={name}>
-            <h2>{name}</h2>
-            <img
-              src={require(`../../images/${reports[name].icon}.png`)}
-              style={{ width: "10rem", height: "10rem" }}
-              alt="demo"
-            />
-            <BarChart
-              width={500}
-              height={300}
-              data={data(name)}
-              margin={{ top: 40, right: 40, left: 40, bottom: 40 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
+      <div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignContent: "flex-start",
+            paddingRight: "5rem",
+            paddingLeft: "5rem",
+            width: "80%"
+          }}
+        >
+          {jsItems.map(name => (
+            <Paper style={{ margin: "2rem" }} key={name}>
+              <h2>{name}</h2>
+              <img
+                src={require(`../../images/${reports[name].icon}.png`)}
+                style={{ width: "10rem", height: "10rem" }}
+                alt="demo"
+              />
+              <BarChart
+                width={400}
+                height={250}
+                data={data(name)}
+                margin={{ top: 40, right: 40, left: 40, bottom: 40 }}
+                barSize={400}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
 
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="Script" stackId="a" fill="#ffd700" />
-              <Bar dataKey="Stylesheet" stackId="a" fill="#98fb98" />
-              <Bar dataKey="Document" stackId="a" fill="#4169e1" />
-            </BarChart>
-          </Paper>
-        ))}
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="Script" stackId="a" fill="#ffd700" />
+                <Bar dataKey="Stylesheet" stackId="a" fill="#98fb98" />
+                <Bar dataKey="Document" stackId="a" fill="#4169e1" />
+              </BarChart>
+            </Paper>
+          ))}
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <Divider />
+        <br />
+        <br />
+        <br />
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignContent: "flex-start",
+            paddingRight: "5rem",
+            paddingLeft: "5rem",
+            width: "80%"
+          }}
+        >
+          {["001-simple", "002-fetch", "003-form", "004-router"].map(name => (
+            <Paper style={{ margin: "2rem", padding: "2rem" }}>
+              <h2>{name}</h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <BarChart
+                  width={600}
+                  height={500}
+                  data={totalData(name)}
+                  margin={{ top: 40, right: 40, left: 40, bottom: 40 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="Script" stackId="a" fill="#ffd700" />
+                  <Bar dataKey="Stylesheet" stackId="a" fill="#98fb98" />
+                  <Bar dataKey="Document" stackId="a" fill="#4169e1" />
+                </BarChart>
+              </div>
+            </Paper>
+          ))}
+        </div>
       </div>
     );
   }

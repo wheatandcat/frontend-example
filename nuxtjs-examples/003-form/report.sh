@@ -5,6 +5,9 @@ DIR=003-form
 
 rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
+npm run generate
+cp .nuxt/dist/report.html ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report/report.html
+
 npm run build
 npm run start &
 lighthouse http://localhost:3000 --output json --output-path ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report/report.json

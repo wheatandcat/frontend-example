@@ -1,7 +1,7 @@
 {
   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36",
   "lighthouseVersion": "3.0.3",
-  "fetchTime": "2018-09-23T19:45:52.415Z",
+  "fetchTime": "2018-10-01T21:04:25.404Z",
   "requestedUrl": "http://localhost:5000/",
   "finalUrl": "http://localhost:5000/",
   "runWarnings": [],
@@ -68,10 +68,10 @@
       "description": "First contentful paint marks the time at which the first text/image is painted. [Learn more](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint).",
       "score": 0.94,
       "scoreDisplayMode": "numeric",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "displayValue": [
         "%10d ms",
-        2054.4297500000002
+        2053.5915
       ]
     },
     "first-meaningful-paint": {
@@ -80,10 +80,10 @@
       "description": "First Meaningful Paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint).",
       "score": 0.94,
       "scoreDisplayMode": "numeric",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "displayValue": [
         "%10d ms",
-        2054.4297500000002
+        2053.5915
       ]
     },
     "load-fast-enough-for-pwa": {
@@ -92,7 +92,7 @@
       "description": "A fast page load over a 3G network ensures a good mobile user experience. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/fast-3g).",
       "score": 1,
       "scoreDisplayMode": "binary",
-      "rawValue": 2054.4297500000002
+      "rawValue": 2053.5915
     },
     "speed-index": {
       "id": "speed-index",
@@ -100,10 +100,10 @@
       "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/speed-index).",
       "score": 0.99,
       "scoreDisplayMode": "numeric",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "displayValue": [
         "%10d ms",
-        2054.4297500000002
+        2053.5915
       ]
     },
     "screenshot-thumbnails": {
@@ -119,52 +119,52 @@
         "items": [
           {
             "timing": 300,
-            "timestamp": 254530723041,
+            "timestamp": 240883594470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 600,
-            "timestamp": 254531023041,
+            "timestamp": 240883894470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 900,
-            "timestamp": 254531323041,
+            "timestamp": 240884194470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 1200,
-            "timestamp": 254531623041,
+            "timestamp": 240884494470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 1500,
-            "timestamp": 254531923041,
+            "timestamp": 240884794470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 1800,
-            "timestamp": 254532223041,
+            "timestamp": 240885094470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 2100,
-            "timestamp": 254532523041,
+            "timestamp": 240885394470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 2400,
-            "timestamp": 254532823041,
+            "timestamp": 240885694470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 2700,
-            "timestamp": 254533123041,
+            "timestamp": 240885994470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           },
           {
             "timing": 3000,
-            "timestamp": 254533423041,
+            "timestamp": 240886294470,
             "data": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIANUAeAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP011Lx34f0bWYNIvtYsrTVbiMyw2Ms6rNIgDnIT7xGIpDwP4G9DQBQT4qeGZ9EtNVttR+3Wl1JHDD9hgluJGkeETqnlxoXB8ohyCuQpyQKAKmh/G3wL4jgeWw8VaXJ5cz28iSXAidJEYqylHww5GRkDKlWGVZSQDd8KeMtH8bWVzd6Lfw6hb21zJaSvCT8kqH5lIIBHUEeoYEZBBIBt0AFABQAUAFABQAUAFABQAUAFJgY2p65odhcpa6hqdja3MwVkiuZ0R3BJC4VjyM5A/GmBJYahpGqG4s7G8tLprYgTQW8iOYuoUMo6fdIGR/D7UAaD26PjcMgDABoAdHEkQOxQu45OB1PqaAH0AFABQAUAFABQAUAFABQAUAFJgMMKF9+xd/8Aexz3/wATTAFiRG3KoU4AyB2HQUAPoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMApgFABQAUAFABQAUAFABQAUAFABQAUAFABSYBTAKACgAoAKACgAoAKACgAoAKACgAoAKACkwCmAUAFABQAUAFABQAUAFABQAUAFABQAUAFJgFMAoAKACgAoAKACgAoAKACgAoAKACgAoAKTAKYBQAUAFABQAUAFABQAUAFABQAUAFABQAUmAUwCgAoAKACgAoAKACgAoAKACgAoAKACgApMD/AP/Z"
           }
         ]
@@ -218,11 +218,11 @@
       "description": "Time To First Byte identifies the time at which your server sends a response. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/ttfb).",
       "score": 1,
       "scoreDisplayMode": "binary",
-      "rawValue": 28.014,
+      "rawValue": 26.900000000000002,
       "displayValue": "",
       "details": {
         "type": "opportunity",
-        "overallSavingsMs": -571.986,
+        "overallSavingsMs": -573.1,
         "headings": [],
         "items": []
       }
@@ -233,10 +233,10 @@
       "description": "First CPU Idle marks the first time at which the page's main thread is quiet enough to handle input. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-interactive).",
       "score": 0.99,
       "scoreDisplayMode": "numeric",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "displayValue": [
         "%10d ms",
-        2054.4297500000002
+        2053.5915
       ]
     },
     "interactive": {
@@ -245,10 +245,10 @@
       "description": "Interactive marks the time at which the page is fully interactive. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/consistently-interactive).",
       "score": 0.99,
       "scoreDisplayMode": "numeric",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "displayValue": [
         "%10d ms",
-        2054.4297500000002
+        2053.5915
       ]
     },
     "user-timings": {
@@ -279,29 +279,29 @@
           "text": "View critical network waterfall:"
         },
         "chains": {
-          "3F3C030FD87EB78B9BDB0B1E254170EC": {
+          "BD6C0218DF04601B6BA79DFC66920E45": {
             "request": {
               "url": "http://localhost:5000/",
-              "startTime": 254530.425435,
-              "endTime": 254530.455834,
-              "responseReceivedTime": 254530.45432400002,
+              "startTime": 240883.296938,
+              "endTime": 240883.325934,
+              "responseReceivedTime": 240883.324576,
               "transferSize": 1868
             },
             "children": {}
           },
-          "1000077167.18": {
+          "1000019796.18": {
             "request": {
               "url": "http://localhost:5000/favicon.ico",
-              "startTime": 254530.551778,
-              "endTime": 254530.558097,
-              "responseReceivedTime": 254530.557722,
+              "startTime": 240883.431935,
+              "endTime": 240883.438392,
+              "responseReceivedTime": 240883.437989,
               "transferSize": 2571
             },
             "children": {}
           }
         },
         "longestChain": {
-          "duration": 132.66199998906814,
+          "duration": 141.4539999968838,
           "length": 1,
           "transferSize": 2571
         }
@@ -441,10 +441,10 @@
       "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this.",
       "score": 1,
       "scoreDisplayMode": "numeric",
-      "rawValue": 375.936,
+      "rawValue": 391.58,
       "displayValue": [
         "%10d ms",
-        375.936
+        391.58
       ],
       "details": {
         "type": "table",
@@ -465,37 +465,37 @@
           {
             "group": "styleLayout",
             "groupLabel": "Style & Layout",
-            "duration": 157.536
+            "duration": 172.36800000000002
           },
           {
             "group": "scriptEvaluation",
             "groupLabel": "Script Evaluation",
-            "duration": 113.17200000000001
+            "duration": 116.68799999999999
           },
           {
             "group": "other",
             "groupLabel": "Other",
-            "duration": 79.828
+            "duration": 78.136
           },
           {
             "group": "garbageCollection",
             "groupLabel": "Garbage Collection",
-            "duration": 10.616
+            "duration": 9.64
           },
           {
             "group": "scriptParseCompile",
             "groupLabel": "Script Parsing & Compilation",
-            "duration": 6.855999999999999
+            "duration": 7.012
           },
           {
             "group": "parseHTML",
             "groupLabel": "Parse HTML & CSS",
-            "duration": 5.288
+            "duration": 5.1080000000000005
           },
           {
             "group": "paintCompositeRender",
             "groupLabel": "Rendering",
-            "duration": 2.6400000000000006
+            "duration": 2.6280000000000006
           }
         ]
       }
@@ -506,10 +506,10 @@
       "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/bootup).",
       "score": 1,
       "scoreDisplayMode": "numeric",
-      "rawValue": 114.608,
+      "rawValue": 119.7,
       "displayValue": [
         "%10d ms",
-        114.608
+        119.7
       ],
       "details": {
         "type": "table",
@@ -541,13 +541,13 @@
         "items": [
           {
             "url": "http://localhost:5000/_next/static/commons/main-91c9003a1778657a1e08.js",
-            "total": 114.608,
-            "scripting": 102.44,
-            "scriptParseCompile": 1.552
+            "total": 119.7,
+            "scripting": 108.548,
+            "scriptParseCompile": 1.512
           }
         ],
         "summary": {
-          "wastedMs": 114.608
+          "wastedMs": 119.7
         }
       }
     },
@@ -654,34 +654,34 @@
           {
             "url": "http://localhost:5000/",
             "startTime": 0,
-            "endTime": 30.398999981116503,
+            "endTime": 28.995999979088083,
             "transferSize": 1868,
             "statusCode": 200,
             "mimeType": "text/html",
             "resourceType": "Document"
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/index.js",
-            "startTime": 35.948999982792884,
-            "endTime": 45.550999988336116,
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/index.js",
+            "startTime": 35.01799999503419,
+            "endTime": 43.8469999935478,
             "transferSize": 741,
             "statusCode": 200,
             "mimeType": "application/javascript",
             "resourceType": "Script"
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_app.js",
-            "startTime": 36.259999993490055,
-            "endTime": 46.93899999256246,
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_app.js",
+            "startTime": 35.28399998322129,
+            "endTime": 45.43199998443015,
             "transferSize": 3617,
             "statusCode": 200,
             "mimeType": "application/javascript",
             "resourceType": "Script"
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_error.js",
-            "startTime": 36.4279999921564,
-            "endTime": 49.195999978110194,
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_error.js",
+            "startTime": 35.41199999745004,
+            "endTime": 46.97999998461455,
             "transferSize": 10279,
             "statusCode": 200,
             "mimeType": "application/javascript",
@@ -689,8 +689,8 @@
           },
           {
             "url": "http://localhost:5000/_next/static/commons/main-91c9003a1778657a1e08.js",
-            "startTime": 36.877999984426424,
-            "endTime": 50.23199997958727,
+            "startTime": 35.690999997314066,
+            "endTime": 48.36799998884089,
             "transferSize": 180264,
             "statusCode": 200,
             "mimeType": "application/javascript",
@@ -698,8 +698,8 @@
           },
           {
             "url": "http://localhost:5000/favicon.ico",
-            "startTime": 126.34299998171628,
-            "endTime": 132.66199998906814,
+            "startTime": 134.99699998646975,
+            "endTime": 141.4539999968838,
             "transferSize": 2571,
             "statusCode": 404,
             "mimeType": "text/html",
@@ -714,7 +714,7 @@
       "description": "Collects all available metrics.",
       "score": null,
       "scoreDisplayMode": "informative",
-      "rawValue": 2054.4297500000002,
+      "rawValue": 2053.5915,
       "details": {
         "items": [
           {
@@ -725,25 +725,25 @@
             "speedIndex": 2054,
             "estimatedInputLatency": 13,
             "observedNavigationStart": 0,
-            "observedNavigationStartTs": 254530423041,
-            "observedFirstPaint": 106,
-            "observedFirstPaintTs": 254530528750,
-            "observedFirstContentfulPaint": 106,
-            "observedFirstContentfulPaintTs": 254530528750,
-            "observedFirstMeaningfulPaint": 106,
-            "observedFirstMeaningfulPaintTs": 254530528750,
+            "observedNavigationStartTs": 240883294470,
+            "observedFirstPaint": 108,
+            "observedFirstPaintTs": 240883402257,
+            "observedFirstContentfulPaint": 108,
+            "observedFirstContentfulPaintTs": 240883402257,
+            "observedFirstMeaningfulPaint": 108,
+            "observedFirstMeaningfulPaintTs": 240883402257,
             "observedTraceEnd": 1200,
-            "observedTraceEndTs": 254531622749,
-            "observedLoad": 125,
-            "observedLoadTs": 254530547939,
-            "observedDomContentLoaded": 40,
-            "observedDomContentLoadedTs": 254530463349,
-            "observedFirstVisualChange": 101,
-            "observedFirstVisualChangeTs": 254530524041,
-            "observedLastVisualChange": 101,
-            "observedLastVisualChangeTs": 254530524041,
-            "observedSpeedIndex": 102,
-            "observedSpeedIndexTs": 254530524654
+            "observedTraceEndTs": 240884494760,
+            "observedLoad": 134,
+            "observedLoadTs": 240883428659,
+            "observedDomContentLoaded": 39,
+            "observedDomContentLoadedTs": 240883333891,
+            "observedFirstVisualChange": 99,
+            "observedFirstVisualChangeTs": 240883393470,
+            "observedLastVisualChange": 99,
+            "observedLastVisualChangeTs": 240883393470,
+            "observedSpeedIndex": 99,
+            "observedSpeedIndexTs": 240883393561
           }
         ]
       }
@@ -1249,32 +1249,32 @@
           {
             "url": "http://localhost:5000/_next/static/commons/main-91c9003a1778657a1e08.js",
             "totalBytes": 180264,
-            "totalMs": 4.56502554005147
+            "totalMs": 4.314924791292668
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_error.js",
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_error.js",
             "totalBytes": 10279,
-            "totalMs": 0.2603065366694906
+            "totalMs": 0.24604531093117504
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_app.js",
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_app.js",
             "totalBytes": 3617,
-            "totalMs": 0.0915973093816079
+            "totalMs": 0.08657903391750756
           },
           {
             "url": "http://localhost:5000/favicon.ico",
             "totalBytes": 2571,
-            "totalMs": 0.06510828930608624
+            "totalMs": 0.06154124860434391
           },
           {
             "url": "http://localhost:5000/",
             "totalBytes": 1868,
-            "totalMs": 0.047305439293570235
+            "totalMs": 0.04471375044454081
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/index.js",
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/index.js",
             "totalBytes": 741,
-            "totalMs": 0.018765166229408752
+            "totalMs": 0.01773709265492759
           }
         ]
       }
@@ -1431,12 +1431,12 @@
             "wastedBytes": 122082
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_error.js",
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_error.js",
             "totalBytes": 9976,
             "wastedBytes": 5784
           },
           {
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_app.js",
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_app.js",
             "totalBytes": 3315,
             "wastedBytes": 2077
           }
@@ -1657,15 +1657,15 @@
           },
           {
             "protocol": "http/1.1",
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/index.js"
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/index.js"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_app.js"
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_app.js"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://localhost:5000/_next/a6520bec-4323-46a3-97fb-076749d1aa63/page/_error.js"
+            "url": "http://localhost:5000/_next/ae288a3b-94c7-4019-96cc-3f5ee5a09c9a/page/_error.js"
           },
           {
             "protocol": "http/1.1",
@@ -2478,6 +2478,6 @@
     }
   },
   "timing": {
-    "total": 3822
+    "total": 3843
   }
 }

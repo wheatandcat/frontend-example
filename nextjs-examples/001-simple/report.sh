@@ -6,7 +6,8 @@ DIR=001-simple
 rm -rf ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 mkdir -p ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
 ANALYZE=1 HOST=${MOCK_HOST} yarn build
-cp .next/stats.json ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report
+webpack-bundle-analyzer .next/stats.json -m static -r report.html --no-open 
+mv report.html ../../../examples-pages/frontend-example/${ROOT_DIR}/${DIR}/report/report.html
 
 HOST=${MOCK_HOST} yarn build
 HOST=${MOCK_HOST} PORT=5000 yarn start &
